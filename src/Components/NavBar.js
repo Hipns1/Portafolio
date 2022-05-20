@@ -17,12 +17,15 @@ const NavBar = () => {
         }
     }
 
+    const handleClose = () => {
+        handleMenu();
+        document.getElementById("check").click();
+    }
+
     useEffect(() => {
         handleMenu();
         document.getElementById("close").style.display = "none";
     }, [])
-
-
 
     return (
         <div className={styles.nav}>
@@ -39,14 +42,14 @@ const NavBar = () => {
                     <i className="fa-solid fa-xmark" id="close"></i>
                 </label>
                 <div className={styles.nav_options} id="nav_options">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                    <a href="https://github.com/Hipns1" target="blank">
+                    <a onClick={() => handleClose()} href="#home">Home</a>
+                    <a onClick={() => handleClose()} href="#about">About</a>
+                    <a onClick={() => handleClose()} href="#projects">Projects</a>
+                    <a onClick={() => handleClose()} href="#contact">Contact</a>
+                    <a onClick={() => handleClose()} href="https://github.com/Hipns1" target="blank">
                         <i className="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/jes%C3%BAs-david-p%C3%A9rez-ferrer-a72117164/" target="blank">
+                    <a onClick={() => handleClose()} href="https://www.linkedin.com/in/jes%C3%BAs-david-p%C3%A9rez-ferrer-a72117164/" target="blank">
                         <i className="fa-brands fa-linkedin"></i>
                     </a>
                 </div>

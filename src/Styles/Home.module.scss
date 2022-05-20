@@ -25,6 +25,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            text-align: center;
 
             @media (max-width: 950px) {
                 font-size: 30px;
@@ -66,7 +67,7 @@
             }
 
             &:hover {
-                background-color: #d91c1c;
+                background-color: #bc4ed8;
                 transform: scale(1.03);
             }
         }
