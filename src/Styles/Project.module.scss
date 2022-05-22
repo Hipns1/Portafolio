@@ -11,14 +11,40 @@
         }
     }
 
+    .projects_filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            height: 40px;
+            width: 150px;
+            margin: 0px 10px;
+            background-color: transparent;
+            border: 3px solid transparent;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+
+            i{
+                font-size: 20px;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+        }
+    }
+
     .projects_card__container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         padding: 20px 20px;
+        transition: 0.6s all ease-in-out;
 
         .projects_card {
+            transition: 0.6s all ease-in-out;
             width: 400px;
             height: 300px;
             margin: 5px;

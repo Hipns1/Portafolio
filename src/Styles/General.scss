@@ -6,6 +6,16 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
 }
+
 main{
     overflow: hidden;
+}
+
+.active{
+    color: #9932cc;
+    transition: 0.5s all ease-in-out;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 3px solid #9932cc !important;
 }

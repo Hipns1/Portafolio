@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../Styles/Modal.module.scss';
 import Slider from './Slider';
+import { motion } from 'framer-motion';
 
 const ProjectModal = ({ project, close }) => {
 
@@ -11,12 +12,14 @@ const ProjectModal = ({ project, close }) => {
     return (
         <div className={styles.modal_container}>
             <div className={styles.modal_background}>
-                <div className={styles.modal_content}>
-
+                <motion.div 
+                initial={{ opacity: 0, y: -300 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, type: 'spring', stiffness: 100 }}
+                className={styles.modal_content}>
                     <div className={styles.modal_header}>
                         <Slider project={project} />
                     </div>
-
                     <div className={styles.modal_body}>
                         <div className={styles.modal_title}>
                             <h1>{project.title}</h1>
@@ -26,7 +29,6 @@ const ProjectModal = ({ project, close }) => {
                             <p>{project.description}</p>
                         </div>
                     </div>
-
                     <div className={styles.modal_footer}>
                         <a href={project.deploy} target="_blank" rel="noopener noreferrer">
                             <i className="fa-solid fa-arrow-up-right-from-square"></i>
@@ -36,7 +38,7 @@ const ProjectModal = ({ project, close }) => {
                             <i className="fa-solid fa-xmark"></i>
                         </button>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )
