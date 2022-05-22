@@ -18,7 +18,6 @@ const About = () => {
         getData();
     }, [])
 
-    console.log(skills);
     return (
         <div id="about" className={styles.about_container}>
             <div className={styles.about_title}>

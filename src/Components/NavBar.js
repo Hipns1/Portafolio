@@ -4,16 +4,20 @@ import { useEffect, useState } from "react";
 
 const NavBar = () => {
 
-    const [isOpen, setIsOpen] = useState();
+    const [isOpen, setIsOpen] = useState(false);
+
+
 
     const handleMenu = () => {
+        const bar = document.getElementById("bar");
+        const close = document.getElementById("close");
         setIsOpen(!isOpen);
         if (isOpen) {
-            document.getElementById("bar").style.display = "none";
-            document.getElementById("close").style.display = "block";
+            bar.style.display = "none";
+            close.style.display = "block";
         } else if (isOpen === false) {
-            document.getElementById("bar").style.display = "block";
-            document.getElementById("close").style.display = "none";
+            bar.style.display = "block";
+            close.style.display = "none";
         }
     }
 
@@ -28,7 +32,11 @@ const NavBar = () => {
     }, [])
 
     return (
-        <div className={styles.nav}>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className={styles.nav}>
             <nav className={styles.nav_container}>
                 <div className={styles.nav_logo}>
                     <h1>JDPF.</h1>
@@ -54,8 +62,7 @@ const NavBar = () => {
                     </a>
                 </div>
             </nav>
-
-        </div>
+        </motion.div>
     )
 }
 
