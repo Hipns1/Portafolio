@@ -32,23 +32,20 @@ const MyTextArea = ({ label, ...props }) => {
 const Contact = () => {
 
     //funcion para enviar el formulario
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        emailjs.sendForm('service_dyy17bo', 'template_95o0l4q', e.target, 'EP2yVkfqx9nXbfu_Z')
+    const handleSubmit = () => {
+        const element = document.getElementById("form")
+        emailjs.sendForm('service_dyy17bo', 'template_95o0l4q', element, 'EP2yVkfqx9nXbfu_Z')
             .then((result) => {
-                console.log(result.text);
+                Swal.fire({
+                    title: 'Thank you!',
+                    text: 'Your message has been sent successfully',
+                    icon: 'success',
+                    timer: 1000,
+                    showConfirmButton: false
+                });
             }, (error) => {
                 console.log(error.text);
             });
-
-        Swal.fire({
-            title: 'Thank you!',
-            text: 'Your message has been sent successfully',
-            icon: 'success',
-            timer: 1000,
-            showConfirmButton: false
-        });
-        e.target.reset();
     }
 
     return (
@@ -66,12 +63,13 @@ const Contact = () => {
                         message: "",
                     }}
                     validationSchema={SignupSchema}
-                    onSubmit={({ resetForm }) => {
-                        resetForm()
+                    onSubmit={(values, { resetForm }) => {
+                        handleSubmit();
+                        resetForm();
                     }}
                 >
                     {({ errors, touched }) => (
-                        <Form onSubmit={handleSubmit}>
+                        <Form id='form'>
                             <div className={styles.contact_form__inputs}>
                                 <Field name="name" type="text" autoComplete="off" placeholder="Name" />
                                 {errors.name && touched.name ? (
