@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import styled from 'styled-components';
 import { nextSlide } from '../Hooks/nextSlide';
 import { prevSlide } from '../Hooks/prevSlide';
 import styles from "../Styles/Slider.module.scss";
@@ -21,34 +20,34 @@ const Slider = ({ project }) => {
         <div className={styles.slide_container}>
             <div className={styles.slider_images} ref={slideshow} >
                 {project.image1 ? <div className={styles.slider_slide}>
-                    <img src={project.image1} />
+                    <img src={project.image1} alt="slide1"/>
                 </div> : null}
                 {project.image2 ? <div className={styles.slider_slide}>
-                    <img src={project.image2} />
+                    <img src={project.image2} alt="slide2"/>
                 </div> : null}
                 {project.image3 ? <div className={styles.slider_slide}>
-                    <img src={project.image3} />
+                    <img src={project.image3} alt="slide3"/>
                 </div> : null}
                 {project.image4 ? <div className={styles.slider_slide}>
-                    <img src={project.image4} />
+                    <img src={project.image4} alt="slide4"/>
                 </div> : null}
                 {project.image5 ? <div className={styles.slider_slide}>
-                    <img src={project.image5} />
+                    <img src={project.image5} alt="slide5"/>
                 </div> : null}
                 {project.image6 ? <div className={styles.slider_slide}>
-                    <img src={project.image6} />
+                    <img src={project.image6} alt="slide6"/>
                 </div> : null}
                 {project.image7 ? <div className={styles.slider_slide}>
-                    <img src={project.image7} />
+                    <img src={project.image7} alt="slide7"/>
                 </div> : null}
                 {project.image8 ? <div className={styles.slider_slide}>
-                    <img src={project.image8} />
+                    <img src={project.image8} alt="slide8"/>
                 </div> : null}
                 {project.image9 ? <div className={styles.slider_slide}>
-                    <img src={project.image9} />
+                    <img src={project.image9} alt="slide9"/>
                 </div> : null}
                 {project.image10 ? <div className={styles.slider_slide}>
-                    <img src={project.image10} />
+                    <img src={project.image10} alt="slide10"/>
                 </div> : null}
             </div>
             <div className={styles.slider_controls}>

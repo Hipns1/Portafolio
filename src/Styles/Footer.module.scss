@@ -1,0 +1,18 @@
+.footer_container {
+    background-color: #c2c2c2ef;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: #170939;
+        font-size: 12px;
+        font-weight: bold;
+
+        span {
+            color: #9932cc;
+            margin-left: 5px;
+        }
+    }
+}

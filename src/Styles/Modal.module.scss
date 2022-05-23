@@ -20,7 +20,7 @@
             align-items: center;
             background-color: #fff;
 
-            @media (max-width: 500px) {
+            @media (max-width: 736px) {
                 width: 95%;
             }
 
@@ -41,12 +41,20 @@
                     h1 {
                         color: #170939;
                         font-size: 30px;
+
+                        @media (max-width: 600px) {
+                            font-size: 24px;
+                        }
                     }
 
                     p {
                         color: #9932cc;
                         font-size: 16px;
                         margin: 5px 0px 10px 0px;
+
+                        @media (max-width: 600px) {
+                            font-size: 14px;
+                        }
                     }
                 }
 
@@ -56,6 +64,9 @@
                         color: #170939;
                         font-size: 16px;
                         font-weight: 300;
+                        @media (max-width: 600px) {
+                            font-size: 14px;
+                        }
                     }
                 }
             }

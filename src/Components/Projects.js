@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styles from "../Styles/Project.module.scss";
 import ProjectModal from './ProjectModal';
 import { motion } from 'framer-motion';
+import wave from "../Styles/Images/wave.svg";
 
 const Projects = () => {
 
@@ -79,7 +80,7 @@ const Projects = () => {
                             initial={{ opacity: 0, y: -30 }}
                             whileInView={{ opacity: 1, y: 0, }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.3}}
+                            transition={{ duration: 0.3 }}
                             className={styles.projects_card}
                             key={project.id}>
                             <div className={styles.projects_card__img}
@@ -107,6 +108,9 @@ const Projects = () => {
                     project={projectModal}
                     close={setShowModal} />
                 : null}
+            <div className={styles.projects_wave}>
+                <img src={wave} alt="wave" />
+            </div>
         </div>
     )
 }

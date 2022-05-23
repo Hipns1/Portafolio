@@ -6,8 +6,13 @@
         h1 {
             text-align: center;
             color: #170939;
-            margin: 20px 0px;
+            margin-bottom: 80px;
+            margin-top: 30px;
             font-size: 36px;
+
+            @media (max-width: 768px) {
+                font-size: 30px;
+            }
         }
     }
 
@@ -19,6 +24,7 @@
         @media (max-width: 992px) {
             flex-direction: column;
             align-items: center;
+            padding: 20px 0px;
         }
 
         .about_me {
@@ -30,7 +36,10 @@
 
             @media (max-width: 992px) {
                 width: 90%;
-                margin-top: 16px;
+            }
+
+            @media (max-width: 768px) {
+                margin-top: -40px;
             }
 
             .about_text {
@@ -39,13 +48,14 @@
                 width: 440px;
 
                 @media (max-width: 992px) {
-                    width: 90%;
+                    width: 100%;
                 }
 
                 h1 {
                     color: #8925ba;
                     font-size: 20px;
                     font-weight: bold;
+                    width: 100%;
                 }
 
                 h2 {
@@ -56,6 +66,34 @@
                     line-height: 11pt;
                     letter-spacing: 0.7px;
                     font-weight: 400;
+                }
+
+                .about_download {
+                    margin-top: 50px !important;
+
+                    a {
+                        padding: 10px 8px;
+                        height: 40px;
+                        background-color: transparent;
+                        color: #170939;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: center;
+                        text-decoration: none;
+                        border: 2px solid #170939;
+                        transition: all 0.3s ease-in-out;
+
+                        i {
+                            margin-right: 10px;
+                            font-size: 16px;
+                        }
+
+                        &:hover {
+                            background-color: #170939;
+                            color: white;
+                        }
+                    }
                 }
             }
 

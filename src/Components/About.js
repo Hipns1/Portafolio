@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styles from "../Styles/About.module.scss";
 import profileImg from "../Styles/Images/profile4.png";
 import { motion } from 'framer-motion';
+import pdf from "../Styles/Images/ENGLISH-CV-FRONTEND.pdf";
 
 const About = () => {
 
@@ -48,6 +49,14 @@ const About = () => {
                             websites. I like to work in a team, pose personal
                             challenges and always looking to acquire new knowledge.
                         </h2>
+                        <div className={styles.about_download}>
+                            <a
+                                href={pdf}
+                                download="JESUS PEREZ_RESUME.pdf">
+                                <i className="fa-solid fa-download"></i>
+                                Download my resume
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
 
