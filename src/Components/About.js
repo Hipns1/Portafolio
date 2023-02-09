@@ -3,20 +3,14 @@ import styles from "../Styles/About.module.scss";
 import profileImg from "../Styles/Images/profile4.png";
 import { motion } from 'framer-motion';
 import pdf from "../Styles/Images/ENGLISH-CV-FRONTEND.pdf";
+import dataSkills from "../utils/data.json"
 
 const About = () => {
 
     const [skills, setSkills] = React.useState([]);
 
-    //obtener datos con fetch
-    const getData = async () => {
-        const resp = await fetch('https://portfolio-jdpf.herokuapp.com/skills/');
-        const data = await resp.json();
-        setSkills(data);
-    }
-
     useEffect(() => {
-        getData();
+        setSkills(dataSkills.skills)
     }, [])
 
     return (

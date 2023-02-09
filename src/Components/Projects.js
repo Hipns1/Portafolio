@@ -3,6 +3,7 @@ import styles from "../Styles/Project.module.scss";
 import ProjectModal from './ProjectModal';
 import { motion } from 'framer-motion';
 import wave from "../Styles/Images/wave.svg";
+import dataProjects from "../utils/data.json";
 
 const Projects = () => {
 
@@ -10,14 +11,6 @@ const Projects = () => {
     const [projectModal, setProjectModal] = React.useState([]);
     const [showModal, setShowModal] = React.useState(false);
     const [projectsFilter, setProjectsFilter] = React.useState([]);
-
-    //obtener datos con fetch
-    const getData = async () => {
-        const resp = await fetch('https://portfolio-jdpf.herokuapp.com/projects');
-        const data = await resp.json();
-        setProjects(data);
-        setProjectsFilter(data);
-    }
 
     //funcion para activar el modal con el detalle del proyecto
     const handleDetail = (project) => {
@@ -50,9 +43,10 @@ const Projects = () => {
     }
 
     useEffect(() => {
-        getData();
+        setProjects(dataProjects?.projects);
+        setProjectsFilter(dataProjects?.projects);
         allFilter();
-    }, [])
+    }, [allFilter])
 
     return (
         <div className={styles.porjects_container} id="projects">

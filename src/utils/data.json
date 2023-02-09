@@ -1,0 +1,214 @@
+{
+    "projects": [
+        {
+            "id": "0",
+            "title": "Pokedex",
+            "technologies": "ReactJS / Redux / Firebase / SASS",
+            "description": "The pokedex is a portable electronic encyclopedia that Pokémon trainers carry with them to automatically record tokens for all the various Pokémon species seen and captured on their journey as trainers.",
+            "deploy": "https://pokedex-562f3.web.app/landingpage",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653091302/portafolio/3_xf1h8u.png",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653091330/portafolio/1_nbymm8.png",
+            "image2": "https://res.cloudinary.com/hipns1/image/upload/v1653091312/portafolio/2_m70eol.png",
+            "image3": "https://res.cloudinary.com/hipns1/image/upload/v1653091302/portafolio/3_xf1h8u.png",
+            "image4": "https://res.cloudinary.com/hipns1/image/upload/v1653091316/portafolio/4_mrqzhr.png",
+            "image5": "https://res.cloudinary.com/hipns1/image/upload/v1653091317/portafolio/5_nsyu2j.png"
+        },
+        {
+            "id": "1",
+            "title": "MakeFit",
+            "technologies": "ReactJS / Redux / Firebase / SASS",
+            "description": "MakeFit is a web application that aims to give people the freedom to discover and enjoy healthy recipe variants of their favorite foods, such as pizza or hamburger, and expose their nutritional values and caloric intake, at the same time. that provides the confidence and solidity of the exposed recipes.",
+            "deploy": "https://makefit-3e6d3.web.app/",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653091942/portafolio/3.1_lns9el.png",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653091972/portafolio/1_jg9ue8.png",
+            "image2": "https://res.cloudinary.com/hipns1/image/upload/v1653091939/portafolio/2_xuick5.png",
+            "image3": "https://res.cloudinary.com/hipns1/image/upload/v1653091990/portafolio/3_nguq8g.png",
+            "image4": "https://res.cloudinary.com/hipns1/image/upload/v1653091942/portafolio/3.1_lns9el.png",
+            "image5": "https://res.cloudinary.com/hipns1/image/upload/v1653091948/portafolio/3.2_vbhonc.png",
+            "image6": "https://res.cloudinary.com/hipns1/image/upload/v1653091979/portafolio/4_cnen5i.png",
+            "image7": "https://res.cloudinary.com/hipns1/image/upload/v1653091995/portafolio/5_lvn0ac.png",
+            "image8": "https://res.cloudinary.com/hipns1/image/upload/v1653091958/portafolio/6_iuoubx.png",
+            "image9": "https://res.cloudinary.com/hipns1/image/upload/v1653091960/portafolio/7_qcdpma.png",
+            "image10": "https://res.cloudinary.com/hipns1/image/upload/v1653091965/portafolio/8_klxqis.png"
+        },
+        {
+            "id": "2",
+            "title": "Bookmark Landing page",
+            "technologies": "JavaScript / HTML / CSS",
+            "description": "Landing page made with JavaScript, HTML and CSS, applying bootstrap notions for components such as accordions or user profile cards.",
+            "deploy": "https://compassionate-knuth-4972b8.netlify.app/",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653013769/portafolio/1_lpwojx.png",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653013769/portafolio/1_lpwojx.png",
+            "image2": "https://res.cloudinary.com/hipns1/image/upload/v1653013769/portafolio/3_hthjxl.png",
+            "image3": "https://res.cloudinary.com/hipns1/image/upload/v1653013766/portafolio/2_x7wynx.png",
+            "image4": "https://res.cloudinary.com/hipns1/image/upload/v1653013770/portafolio/4_gtxtvj.png",
+            "image5": "https://res.cloudinary.com/hipns1/image/upload/v1653013771/portafolio/5_he0ctq.png"
+        },
+        {
+            "id": "3",
+            "title": "JS calculator",
+            "technologies": "JavaScript / HTML / CSS",
+            "description": "A simple calculator built with JavaScript, HTML and CSS; allows to keep the theme chosen by the user.",
+            "deploy": "https://dazzling-stonebraker-6771c5.netlify.app/",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653016193/portafolio/7_r3tuox.png",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653016191/portafolio/6_vsvqc2.png",
+            "image2": "https://res.cloudinary.com/hipns1/image/upload/v1653016193/portafolio/7_r3tuox.png",
+            "image3": "https://res.cloudinary.com/hipns1/image/upload/v1653016193/portafolio/8_nhwt5n.png"
+        },
+        {
+            "id": "4",
+            "title": "'La tiendita'",
+            "technologies": "JavaScript / HTML / CSS",
+            "description": "E-commerce developed with JavaScript, HTML and CSS. It has a cart which allows you to add and delete products, in addition to a payment gateway to finalize the order.",
+            "deploy": "https://admiring-meninsky-7e17c8.netlify.app/index.html",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653100393/portafolio/Thumbnail-tiendita_n4nea7.jpg",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653023652/portafolio/1_ikcftk.png",
+            "image2": "https://res.cloudinary.com/hipns1/image/upload/v1653023663/portafolio/2_qengzu.png",
+            "image3": "https://res.cloudinary.com/hipns1/image/upload/v1653023656/portafolio/4_llxjei.png",
+            "image4": "https://res.cloudinary.com/hipns1/image/upload/v1653023640/portafolio/3_rm9xpg.png",
+            "image5": "https://res.cloudinary.com/hipns1/image/upload/v1653023656/portafolio/5_orewtt.png",
+            "image6": "https://res.cloudinary.com/hipns1/image/upload/v1653023628/portafolio/6_crotqh.png"
+        },
+        {
+            "id": "5",
+            "title": "Countdown",
+            "technologies": "ReactJS / Styled Components",
+            "description": "countdown, developed in ReactJS and styled with styled components.",
+            "deploy": "https://cozy-jalebi-fcbd39.netlify.app/",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653087314/portafolio/1_kzlyu3.png",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653087314/portafolio/1_kzlyu3.png"
+        },
+        {
+            "id": "6",
+            "title": "Daily bits (quiz app)",
+            "technologies": "ReactJS / Firebase / SASS",
+            "description": "A quiz app developed with ReactJS. This app measures your knowledge of the IT world and keeps statistics of your results.",
+            "deploy": "https://effortless-biscuit-0a72bd.netlify.app/",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653088882/portafolio/3_cgezch.png",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653088882/portafolio/1_onrm76.png",
+            "image2": "https://res.cloudinary.com/hipns1/image/upload/v1653088884/portafolio/2_jg7hn7.png",
+            "image3": "https://res.cloudinary.com/hipns1/image/upload/v1653088882/portafolio/3_cgezch.png",
+            "image4": "https://res.cloudinary.com/hipns1/image/upload/v1653088883/portafolio/4_z1mewx.png",
+            "image5": "https://res.cloudinary.com/hipns1/image/upload/v1653088882/portafolio/5_vihyvy.png"
+        },
+        {
+            "id": "7",
+            "title": "Fylo landing page",
+            "technologies": "ReactJS / Styled Components",
+            "description": "Business landing page developed with ReactJS and stylized with Styled components.",
+            "deploy": "https://dulcet-buttercream-6005cf.netlify.app/",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653089505/portafolio/1_lhqwly.png",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653089505/portafolio/1_lhqwly.png",
+            "image2": "https://res.cloudinary.com/hipns1/image/upload/v1653089513/portafolio/2_gk5u1v.png",
+            "image3": "https://res.cloudinary.com/hipns1/image/upload/v1653089508/portafolio/3_rnodka.png",
+            "image4": "https://res.cloudinary.com/hipns1/image/upload/v1653089510/portafolio/4_rjp2kc.png",
+            "image5": "https://res.cloudinary.com/hipns1/image/upload/v1653089512/portafolio/5_jc76hd.png",
+            "image6": "https://res.cloudinary.com/hipns1/image/upload/v1653089511/portafolio/6_mp0st2.png"
+        },
+        {
+            "id": "8",
+            "title": "ToDo app",
+            "technologies": "ReactJS / Redux / SASS",
+            "description": "ToDo application that allows you to add, edit, delete and filter tasks; also mark them to know which ones are finished. It has a light and dark theme, and keeps it depending on which one you have chosen.",
+            "deploy": "https://62531ae1dc23b12d9f7cca05--visionary-entremet-dec5cf.netlify.app/",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653089967/portafolio/3_isedn8.png",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653089969/portafolio/1_r6w0qc.png",
+            "image2": "https://res.cloudinary.com/hipns1/image/upload/v1653089964/portafolio/2_r7vui5.png",
+            "image3": "https://res.cloudinary.com/hipns1/image/upload/v1653089967/portafolio/3_isedn8.png"
+        },
+        {
+            "id": "9",
+            "title": "Amazonas",
+            "technologies": "ReactJS / Redux / SASS / Firebase / Leaflet",
+            "description": "'Amazonas' is an amazon clone developed with ReactJs, which contains a CRUD that allows you to add, edit, delete and list products through an administrator account. On the user side you can filter, choose and add products to the cart and choose your delivery address on the map.",
+            "deploy": "https://clase-20-a138f.firebaseapp.com/login",
+            "thumb": "https://res.cloudinary.com/hipns1/image/upload/v1653090696/portafolio/5_xtyryt.png",
+            "image1": "https://res.cloudinary.com/hipns1/image/upload/v1653090696/portafolio/2_hpp723.png",
+            "image2": "https://res.cloudinary.com/hipns1/image/upload/v1653090702/portafolio/3_kqybcd.png",
+            "image3": "https://res.cloudinary.com/hipns1/image/upload/v1653090701/portafolio/4_v1k31i.png",
+            "image4": "https://res.cloudinary.com/hipns1/image/upload/v1653090696/portafolio/5_xtyryt.png",
+            "image5": "https://res.cloudinary.com/hipns1/image/upload/v1653090703/portafolio/1_pdwf4o.png",
+            "image6": "https://res.cloudinary.com/hipns1/image/upload/v1653090699/portafolio/6_cu9m20.png"
+        }
+    ],
+    "skills": [
+        {
+            "id": "0",
+            "title": "NextJS",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1675923855/tecnologies/nextjs_x4bx3n.png",
+            "width": "80%"
+        },
+        {
+            "id": "1",
+            "title": "ReactJS",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078077/tecnologies/react_sct7aw.svg",
+            "width": "70%"
+        },
+        {
+            "id": "2",
+            "title": "JavaScript",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078075/tecnologies/js_sn8ed1.svg",
+            "width": "70%"
+        },
+        {
+            "id": "3",
+            "title": "Redux",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078078/tecnologies/redux_q332x7.svg",
+            "width": "60%"
+        },
+        {
+            "id": "4",
+            "title": "Firebase",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078075/tecnologies/firebase_rbrawu.svg",
+            "width": "80%"
+        },
+        {
+            "id": "5",
+            "title": "HTML",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078075/tecnologies/html5_k142ei.svg",
+            "width": "90%"
+        },
+        {
+            "id": "6",
+            "title": "SASS",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078078/tecnologies/sass_ak3msl.svg",
+            "width": "60%"
+        },
+        {
+            "id": "7",
+            "title": "CSS",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078078/tecnologies/css3_mdjsrz.svg",
+            "width": "90%"
+        },
+        {
+            "id": "8",
+            "title": "Photoshop",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078077/tecnologies/photoshop_naoimg.svg",
+            "width": "50%"
+        },
+        {
+            "id": "9",
+            "title": "Python",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078077/tecnologies/python_twttjm.svg",
+            "width": "50%"
+        },
+        {
+            "id": "10",
+            "title": "Git",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078075/tecnologies/git_myusrb.svg",
+            "width": "60%"
+        },
+        {
+            "id": "11",
+            "title": "NodeJS",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078076/tecnologies/node_mysbeb.svg",
+            "width": "40%"
+        },
+        {
+            "id": "12",
+            "title": "Matlab",
+            "image": "https://res.cloudinary.com/hipns1/image/upload/v1653078075/tecnologies/matlab_ivgyzl.svg",
+            "width": "70%"
+        }
+    ]
+}
