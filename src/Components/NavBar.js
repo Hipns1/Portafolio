@@ -6,8 +6,6 @@ const NavBar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-
-
     const handleMenu = () => {
         const bar = document.getElementById("bar");
         const close = document.getElementById("close");

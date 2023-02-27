@@ -6,11 +6,10 @@ import wave from "../Styles/Images/wave.svg";
 import dataProjects from "../utils/data.json";
 
 const Projects = () => {
-
-    const [projects, setProjects] = React.useState([]);
+    const [projects, setProjects] = React.useState([])
     const [projectModal, setProjectModal] = React.useState([]);
     const [showModal, setShowModal] = React.useState(false);
-    const [projectsFilter, setProjectsFilter] = React.useState([]);
+
 
     //funcion para activar el modal con el detalle del proyecto
     const handleDetail = (project) => {
@@ -18,35 +17,24 @@ const Projects = () => {
         setShowModal(true);
     }
 
-    //filtros
-    const allFilter = () => {
-        document.getElementById('all').classList.add('active');
-        document.getElementById('js').classList.remove('active');
-        document.getElementById('react').classList.remove('active');
-        setProjectsFilter(projects);
-    }
-
-    const jsFilter = () => {
-        const filter = projects.filter(project => project.technologies.includes('JavaScript'));
-        document.getElementById('js').classList.add('active');
-        document.getElementById('all').classList.remove('active');
-        document.getElementById('react').classList.remove('active');
-        setProjectsFilter(filter);
-    }
-
-    const reactFilter = () => {
-        const filter = projects.filter(project => project.technologies.includes('ReactJS'));
-        document.getElementById('react').classList.add('active');
-        document.getElementById('js').classList.remove('active');
-        document.getElementById('all').classList.remove('active');
-        setProjectsFilter(filter);
+    const filterProjects = (why) => {
+        if (why === 'all') {
+            setProjects(dataProjects?.projects)
+        }
+        if (why === 'js') {
+            const filter = dataProjects?.projects?.filter(project => project?.technologies?.includes('JavaScript'));
+            setProjects(filter)
+        }
+        if (why === 'react') {
+            const filter = dataProjects?.projects?.filter(project => project?.technologies?.includes('ReactJS'));
+            setProjects(filter);
+        }
     }
 
     useEffect(() => {
-        setProjects(dataProjects?.projects);
-        setProjectsFilter(dataProjects?.projects);
-        allFilter();
-    }, [allFilter])
+        filterProjects()
+        setProjects(dataProjects?.projects)
+    }, [])
 
     return (
         <div className={styles.porjects_container} id="projects">
@@ -54,22 +42,22 @@ const Projects = () => {
                 <h1>PROJECTS</h1>
             </div>
             <div className={styles.projects_filter}>
-                <button id="all" onClick={() => allFilter()}>
+                <button id="all" onClick={() => filterProjects('all')}>
                     <i className="fa-solid fa-earth-americas"></i>
                     ALL
                 </button>
-                <button id='js' onClick={() => jsFilter()}>
+                <button id='js' onClick={() => filterProjects('js')}>
                     <i className="fa-brands fa-js"></i>
                     JAVASCRIPT
                 </button>
-                <button id="react" onClick={() => reactFilter()}>
+                <button id="react" onClick={() => filterProjects('react')}>
                     <i className="fa-brands fa-react"></i>
                     REACTJS
                 </button>
             </div>
             <div className={styles.projects_card__container}>
                 {
-                    projectsFilter.map(project => (
+                    projects.map(project => (
                         <motion.div
                             initial={{ opacity: 0, y: -30 }}
                             whileInView={{ opacity: 1, y: 0, }}

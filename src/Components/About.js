@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import styles from "../Styles/About.module.scss";
-import profileImg from "../Styles/Images/profile4.png";
+import profileImg from "../Styles/Images/profile3.jpg";
 import { motion } from 'framer-motion';
-import pdf from "../Styles/Images/ENGLISH-CV-FRONTEND.pdf";
+import pdf from "../Styles/Images/HV-FRONTEND.pdf";
 import dataSkills from "../utils/data.json"
 
 const About = () => {

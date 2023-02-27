@@ -23,21 +23,13 @@ const Home = () => {
                 </motion.h2>
                 <motion.a
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1}}
+                    whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                     href='#about'>
                     <img src={scrollGif} alt="scrollGif" />
                     Know my work
                 </motion.a>
-                {/* <a href="mailto:jesudpf21@hotmail.com" target="blank">
-                    <i className="fa-solid fa-envelope"></i>
-                    jesudpf21@hotmail.com
-                </a>
-                <a href="https://api.whatsapp.com/send/?phone=573002410510&text&app_absent=0" target="blank">
-                    <i className="fa-solid fa-mobile"></i>
-                    (+57) 300-241-0510
-                </a> */}
             </div>
         </div >
     )
