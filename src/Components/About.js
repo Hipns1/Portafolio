@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styles from "../Styles/About.module.scss";
 import profileImg from "../Styles/Images/profile3.jpg";
 import { motion } from 'framer-motion';
-import pdf from "../Styles/Images/HV-FRONTEND.pdf";
+import pdf from "../Styles/Images/Jesus_Perez_CV_(EN).pdf";
 import dataSkills from "../utils/data.json"
 
 const About = () => {
@@ -36,17 +36,18 @@ const About = () => {
                         className={styles.about_text}>
                         <h1>who I am?</h1>
                         <h2>
-                            I am a mechatronics engineer and passionate about
-                            Front-end development. I have excessive attention
-                            to detail and clean design. I am a web developer
-                            with a passion for creating beautiful and functional
-                            websites. I like to work in a team, pose personal
-                            challenges and always looking to acquire new knowledge.
+                            Passionate about Front-end development,
+                            I have a meticulous attention to detail
+                            and a penchant for clean design. As a web
+                            developer, my goal is to create beautiful
+                            and functional websites. I enjoy collaborative
+                            work, embrace personal challenges, and am
+                            always eager to acquire new knowledge.
                         </h2>
                         <div className={styles.about_download}>
                             <a
                                 href={pdf}
-                                download="JESUS PEREZ_RESUME.pdf">
+                                download="JESUS_PEREZ_RESUME.pdf">
                                 <i className="fa-solid fa-download"></i>
                                 Download my resume
                             </a>
