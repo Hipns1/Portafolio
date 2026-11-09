@@ -1,0 +1,85 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/globals.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Jesús David Pérez Ferrer | Desarrollador Full Stack II",
+  description = "Desarrollador Full Stack con más de 4 años de experiencia en React 19, TypeScript, .NET 10, Clean Architecture, CQRS, PostgreSQL y DevOps.",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://portafolio-jdpf.netlify.app");
+---
+
+<!doctype html>
+<html lang="es" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Jesús David Pérez Ferrer" />
+    <meta name="keywords" content="Jesús Pérez, Full Stack Developer, React 19, Next.js, TypeScript, .NET 10, Clean Architecture, CQRS, Docker, PWA, Astro" />
+
+    <!-- Open Graph / Facebook / Vercel Preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL("/og-image.svg", canonicalURL)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL("/og-image.svg", canonicalURL)} />
+
+    <!-- Fonts preconnect and preload per web-design-guidelines -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <ClientRouter />
+  </head>
+  <body class="bg-canvas text-ink font-sans selection:bg-brand/30 selection:text-white relative min-h-screen">
+    <!-- Skip to main content link for keyboard accessibility (web-design-guidelines) -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-white focus:rounded-lg focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-white"
+    >
+      Saltar al contenido principal
+    </a>
+
+    <!-- Ambient mesh lighting layers (Linear design aesthetic) -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+      <!-- Deep subtle indigo glow top center -->
+      <div class="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-indigo-600/10 blur-[130px] rounded-full"></div>
+      <!-- Soft cyan glow on bottom right -->
+      <div class="absolute top-[40%] -right-[10%] w-[500px] h-[600px] bg-sky-500/5 blur-[150px] rounded-full"></div>
+      <!-- Subtle purple glow bottom left -->
+      <div class="absolute top-[70%] -left-[10%] w-[600px] h-[600px] bg-purple-600/5 blur-[160px] rounded-full"></div>
+      <!-- Subtle noise layer for visual depth without banding -->
+      <div class="absolute inset-0 bg-noise opacity-30 mix-blend-overlay"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="relative z-10 flex flex-col min-h-screen">
+      <slot />
+    </div>
+  </body>
+</html>

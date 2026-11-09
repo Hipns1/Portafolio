@@ -1,0 +1,216 @@
+---
+import SpotlightCard from '../ui/SpotlightCard.tsx';
+import { GitBranch, Shield, Zap, Server, Database, Smartphone, CheckCircle2, Lock } from 'lucide-react';
+---
+
+<section id="proyectos" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-24">
+  <div class="mb-12">
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-brand/30 bg-brand/10 text-brand-hover text-xs font-mono font-medium mb-3">
+      <Zap className="w-3.5 h-3.5" />
+      Showcase de Arquitectura & Proyectos
+    </div>
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink">
+      Sistemas construidos con rigor técnico
+    </h2>
+    <p class="text-ink-subtle text-base mt-2 max-w-2xl text-pretty">
+      Casos de estudio reales donde la escalabilidad, la robustez offline y la seguridad son prioridad de negocio.
+    </p>
+  </div>
+
+  <!-- Bento Grid Container -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    
+    <!-- CARD 1: PeritoYa (Flagship 2x2) -->
+    <SpotlightCard
+      client:visible
+      className="md:col-span-2 lg:col-span-2 p-6 sm:p-8 flex flex-col justify-between group"
+      spotlightColor="rgba(99, 102, 241, 0.18)"
+    >
+      <div>
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2.5 py-0.5 text-[11px] font-mono font-semibold uppercase tracking-wider text-brand-accent bg-brand-accent/10 border border-brand-accent/20 rounded-md">
+                Plataforma Empresarial &bull; Asisya
+              </span>
+              <span class="px-2 py-0.5 text-[10px] font-mono text-emerald-400 bg-emerald-500/10 rounded-md flex items-center gap-1">
+                <CheckCircle2 className="w-3 h-3" /> En Producción
+              </span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-ink group-hover:text-white transition-colors">
+              PeritoYa: Digitalización integral de peritaje vehicular
+            </h3>
+          </div>
+        </div>
+
+        <p class="text-ink-subtle text-sm sm:text-base leading-relaxed mb-6">
+          Plataforma que digitaliza el peritaje de vehículos de punta a punta. Diseñada como <strong>PWA con soporte offline</strong> para tabletas en campo (sin cobertura en sótanos), resolviendo colisiones entre pestañas con <strong>Web Locks API</strong> y respaldada por un backend en <strong>.NET 10 con Clean Architecture y CQRS</strong>.
+        </p>
+
+        <!-- Technical Highlights Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+          <div class="p-3.5 rounded-xl bg-surface-2/60 border border-white/5">
+            <div class="flex items-center gap-2 text-xs font-mono text-brand mb-1">
+              <Smartphone className="w-3.5 h-3.5" /> Frontend Offline-First
+            </div>
+            <p class="text-xs text-ink-muted">
+              React 19 + TypeScript, Vite 7 y Tailwind CSS 4. Gestión de caché offline robusta y renovación coordinada de sesión.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-surface-2/60 border border-white/5">
+            <div class="flex items-center gap-2 text-xs font-mono text-brand-accent mb-1">
+              <Server className="w-3.5 h-3.5" /> Backend de Alta Eficiencia
+            </div>
+            <p class="text-xs text-ink-muted">
+              .NET 10 con CQRS (MediatR), Repository Pattern, EF Core y Dapper sobre PostgreSQL con capa de caché en Redis.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Tags -->
+      <div class="pt-4 border-t border-hairline flex flex-wrap items-center gap-2">
+        <span class="text-[11px] font-mono text-ink-tertiary mr-1">Stack:</span>
+        {['React 19', 'TypeScript', 'PWA / Offline', '.NET 10', 'CQRS', 'PostgreSQL', 'Redis', 'Web Locks'].map(tag => (
+          <span class="px-2.5 py-1 text-xs font-mono text-ink-muted bg-surface-3/80 border border-hairline-subtle rounded-lg">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </SpotlightCard>
+
+    <!-- CARD 2: Muévelo -->
+    <SpotlightCard
+      client:visible
+      className="col-span-1 md:col-span-2 lg:col-span-1 p-6 sm:p-7 flex flex-col justify-between group"
+      spotlightColor="rgba(56, 189, 248, 0.15)"
+    >
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="px-2.5 py-0.5 text-[11px] font-mono font-semibold uppercase tracking-wider text-sky-400 bg-sky-500/10 border border-sky-500/20 rounded-md">
+            Full Stack Renting
+          </span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-ink mb-3 group-hover:text-white transition-colors">
+          Muévelo: Renting de vehículos con opción de compra
+        </h3>
+        <p class="text-ink-subtle text-xs sm:text-sm leading-relaxed mb-6">
+          Desarrollo integral que incluye sitio público, cotizador dinámico, gestión de solicitudes y panel administrativo.
+        </p>
+
+        <ul class="space-y-2 mb-6 text-xs text-ink-muted">
+          <li class="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-brand-accent shrink-0 mt-0.5" />
+            <span>Frontend React 19 + TypeScript con renderizado ágil y validaciones Zod.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-brand-accent shrink-0 mt-0.5" />
+            <span>Backend .NET 10 CQRS, integración con MinIO (S3) y sincronización con Google Sheets.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pt-4 border-t border-hairline flex flex-wrap gap-1.5">
+        {['React 19', '.NET 10', 'MinIO (S3)', 'Google Sheets API', 'PostgreSQL'].map(tag => (
+          <span class="px-2 py-0.5 text-[11px] font-mono text-ink-muted bg-surface-3/80 border border-hairline-subtle rounded-md">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </SpotlightCard>
+
+    <!-- CARD 3: Pipeline CI/CD Autohospedado -->
+    <SpotlightCard
+      client:visible
+      className="col-span-1 p-6 sm:p-7 flex flex-col justify-between group"
+      spotlightColor="rgba(168, 85, 247, 0.18)"
+    >
+      <div>
+        <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+          <GitBranch className="w-5 h-5" />
+        </div>
+        <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-white transition-colors">
+          Pipeline CI/CD Autohospedado
+        </h3>
+        <p class="text-ink-subtle text-xs sm:text-sm leading-relaxed mb-4">
+          Sistema de despliegue automatizado: un push a GitHub dispara un webhook en n8n que redespliega contenedores Docker en un servidor Linux con notificaciones a Slack.
+        </p>
+        <div class="p-3 rounded-lg bg-surface-2/80 border border-white/5 text-[11px] font-mono text-ink-muted mb-4">
+          <span class="text-purple-400">GitOps Flow:</span> Push &rarr; Webhook &rarr; n8n &rarr; Docker redeploy &rarr; Cloudflare Tunnel + Caddy
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-hairline flex flex-wrap gap-1.5">
+        {['Docker', 'n8n', 'Linux', 'Cloudflare Tunnel', 'Caddy'].map(tag => (
+          <span class="px-2 py-0.5 text-[11px] font-mono text-ink-muted bg-surface-3/80 border border-hairline-subtle rounded-md">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </SpotlightCard>
+
+    <!-- CARD 4: Seguridad & Calidad de Código -->
+    <SpotlightCard
+      client:visible
+      className="col-span-1 p-6 sm:p-7 flex flex-col justify-between group"
+      spotlightColor="rgba(16, 185, 129, 0.15)"
+    >
+      <div>
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+          <Shield className="w-5 h-5" />
+        </div>
+        <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-white transition-colors">
+          Seguridad & Pentesting
+        </h3>
+        <p class="text-ink-subtle text-xs sm:text-sm leading-relaxed mb-4">
+          Implementación de controles rigurosos: protección CSRF, rate limiting por IP, validación de firmas binarias de archivos, CSP estricto y resolución de hallazgos de pentesting y Aikido.
+        </p>
+        <div class="flex items-center gap-2 text-xs font-mono text-emerald-400">
+          <Lock className="w-3.5 h-3.5" /> Pruebas con xUnit & Vitest
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-hairline flex flex-wrap gap-1.5">
+        {['CSRF Shield', 'Rate Limiting', 'Aikido Security', 'xUnit', 'Vitest'].map(tag => (
+          <span class="px-2 py-0.5 text-[11px] font-mono text-ink-muted bg-surface-3/80 border border-hairline-subtle rounded-md">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </SpotlightCard>
+
+    <!-- CARD 5: Perfil & Formación -->
+    <SpotlightCard
+      client:visible
+      className="col-span-1 p-6 sm:p-7 flex flex-col justify-between group"
+      spotlightColor="rgba(59, 130, 246, 0.15)"
+    >
+      <div>
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+          <Database className="w-5 h-5" />
+        </div>
+        <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-white transition-colors">
+          Ingeniería Mecatrónica
+        </h3>
+        <p class="text-ink-subtle text-xs sm:text-sm leading-relaxed mb-4">
+          Graduado de la <em>Universidad Tecnológica de Bolívar</em>. La base en programación, sistemas de control y electrónica aporta una visión analítica rigurosa para la arquitectura de software.
+        </p>
+        <div class="text-xs font-mono text-ink-muted space-y-1">
+          <div>&bull; Ubicación: Colombia (UTC-5)</div>
+          <div>&bull; Idiomas: Español (Nativo), Inglés (B2)</div>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-hairline flex flex-wrap gap-1.5">
+        <span class="px-2 py-0.5 text-[11px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
+          Scrum Certified
+        </span>
+        <span class="px-2 py-0.5 text-[11px] font-mono text-ink-muted bg-surface-3/80 border border-hairline-subtle rounded-md">
+          Clean Code
+        </span>
+      </div>
+    </SpotlightCard>
+
+  </div>
+</section>

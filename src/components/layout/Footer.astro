@@ -1,0 +1,20 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-hairline py-8 px-4 sm:px-6 mt-auto">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-tertiary">
+    <div class="flex items-center gap-2">
+      <span class="font-mono font-bold text-ink">JP</span>
+      <span>&copy; {currentYear} Jesús David Pérez Ferrer. Todos los derechos reservados.</span>
+    </div>
+
+    <div class="flex items-center gap-4 font-mono text-[11px]">
+      <span>Construido con <strong class="text-ink-muted">Astro</strong></span>
+      <span>&bull;</span>
+      <span><strong class="text-ink-muted">React 19</strong></span>
+      <span>&bull;</span>
+      <span><strong class="text-ink-muted">Tailwind CSS</strong></span>
+    </div>
+  </div>
+</footer>

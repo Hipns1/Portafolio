@@ -1,0 +1,86 @@
+---
+import { ArrowRight, Download, Terminal, Layers, ShieldCheck, Cpu } from 'lucide-react';
+---
+
+<section id="inicio" class="relative pt-36 pb-20 md:pt-44 md:pb-28 px-4 sm:px-6 max-w-5xl mx-auto text-center">
+  <!-- Status Badge with subtle shimmer effect -->
+  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-surface-2/80 backdrop-blur-md mb-8 animate-fade-in shadow-inner">
+    <span class="relative flex h-2 w-2">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+    </span>
+    <span class="text-xs font-mono font-medium text-ink-muted">
+      Ingeniero Full Stack II &bull; React 19 &bull; .NET 10 &bull; Cloud
+    </span>
+  </div>
+
+  <!-- Main Headline with balanced typography -->
+  <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-ink max-w-4xl mx-auto leading-[1.1] mb-6 text-balance">
+    Construyo arquitecturas web <span class="bg-gradient-to-r from-brand via-brand-hover to-brand-accent bg-clip-text text-transparent">escalables</span>, seguras y de alto impacto.
+  </h1>
+
+  <!-- Subheadline describing real engineering mastery -->
+  <p class="text-base sm:text-lg md:text-xl text-ink-subtle max-w-2xl mx-auto font-normal leading-relaxed mb-10 text-pretty">
+    Soy <strong>Jesús David Pérez Ferrer</strong>, Ingeniero Mecatrónico y Desarrollador Full Stack con +4 años diseñando PWAs con soporte offline, servicios backend en <strong>.NET 10 bajo Clean Architecture & CQRS</strong> y automatización CI/CD con Docker.
+  </p>
+
+  <!-- CTA Action Buttons -->
+  <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+    <a
+      href="#proyectos"
+      class="group inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-brand hover:bg-brand-hover rounded-xl transition-all duration-200 shadow-lg shadow-brand/20 hover:shadow-brand/35 hover:-translate-y-0.5 active:translate-y-0"
+    >
+      Explorar proyectos
+      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+    </a>
+
+    <a
+      href="/Jesus_Perez_HV_Desarrollador_I.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-ink bg-surface-2/90 hover:bg-surface-3 border border-hairline hover:border-hairline-strong rounded-xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+    >
+      <Download className="w-4 h-4 text-brand-accent" />
+      Descargar CV (PDF)
+    </a>
+  </div>
+
+  <!-- Tech Highlights Strip (Mini Metrics) -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto text-left">
+    <div class="p-4 rounded-xl border border-hairline bg-surface-1/50 backdrop-blur-sm">
+      <div class="flex items-center gap-2 text-brand-accent mb-1">
+        <Layers className="w-4 h-4" />
+        <span class="font-mono text-xs text-ink-tertiary">Frontend</span>
+      </div>
+      <div class="font-semibold text-sm text-ink">React 19 & Next.js</div>
+      <div class="text-[11px] text-ink-subtle">TypeScript, PWA & Vite</div>
+    </div>
+
+    <div class="p-4 rounded-xl border border-hairline bg-surface-1/50 backdrop-blur-sm">
+      <div class="flex items-center gap-2 text-brand mb-1">
+        <Terminal className="w-4 h-4" />
+        <span class="font-mono text-xs text-ink-tertiary">Backend</span>
+      </div>
+      <div class="font-semibold text-sm text-ink">.NET 8 & 10</div>
+      <div class="text-[11px] text-ink-subtle">Clean Arch, CQRS & Redis</div>
+    </div>
+
+    <div class="p-4 rounded-xl border border-hairline bg-surface-1/50 backdrop-blur-sm">
+      <div class="flex items-center gap-2 text-emerald-400 mb-1">
+        <ShieldCheck className="w-4 h-4" />
+        <span class="font-mono text-xs text-ink-tertiary">Seguridad</span>
+      </div>
+      <div class="font-semibold text-sm text-ink">Hardened Systems</div>
+      <div class="text-[11px] text-ink-subtle">Rate limit, CSRF, Aikido</div>
+    </div>
+
+    <div class="p-4 rounded-xl border border-hairline bg-surface-1/50 backdrop-blur-sm">
+      <div class="flex items-center gap-2 text-indigo-400 mb-1">
+        <Cpu className="w-4 h-4" />
+        <span class="font-mono text-xs text-ink-tertiary">DevOps</span>
+      </div>
+      <div class="font-semibold text-sm text-ink">CI/CD & Docker</div>
+      <div class="text-[11px] text-ink-subtle">n8n, Cloudflare & Linux</div>
+    </div>
+  </div>
+</section>

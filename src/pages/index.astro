@@ -1,0 +1,22 @@
+---
+import RootLayout from '../layouts/RootLayout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Hero from '../components/sections/Hero.astro';
+import BentoGrid from '../components/bento/BentoGrid.astro';
+import Experience from '../components/sections/Experience.astro';
+import TechStack from '../components/sections/TechStack.astro';
+import Contact from '../components/sections/Contact.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<RootLayout>
+  <Navbar />
+  <main id="main-content" class="flex-grow">
+    <Hero />
+    <BentoGrid />
+    <Experience />
+    <TechStack />
+    <Contact />
+  </main>
+  <Footer />
+</RootLayout>

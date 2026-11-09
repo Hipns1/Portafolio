@@ -1,0 +1,91 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Canvas -->
+  <rect width="1200" height="630" fill="#030407"/>
+
+  <!-- Ambient Mesh Glows (Linear Aesthetic) -->
+  <circle cx="200" cy="150" r="300" fill="#6366F1" fill-opacity="0.18" filter="blur(140px)"/>
+  <circle cx="1000" cy="450" r="320" fill="#38BDF8" fill-opacity="0.12" filter="blur(160px)"/>
+  <circle cx="600" cy="550" r="250" fill="#8B5CF6" fill-opacity="0.10" filter="blur(130px)"/>
+
+  <!-- Subtle Outer Hairline Border -->
+  <rect x="24" y="24" width="1152" height="582" rx="24" stroke="white" stroke-opacity="0.1" stroke-width="2"/>
+
+  <!-- Grid overlay -->
+  <g opacity="0.04" stroke="white" stroke-width="1">
+    <line x1="24" y1="120" x2="1176" y2="120"/>
+    <line x1="24" y1="240" x2="1176" y2="240"/>
+    <line x1="24" y1="360" x2="1176" y2="360"/>
+    <line x1="24" y1="480" x2="1176" y2="480"/>
+    <line x1="200" y1="24" x2="200" y2="606"/>
+    <line x1="400" y1="24" x2="400" y2="606"/>
+    <line x1="600" y1="24" x2="600" y2="606"/>
+    <line x1="800" y1="24" x2="800" y2="606"/>
+    <line x1="1000" y1="24" x2="1000" y2="606"/>
+  </g>
+
+  <!-- Status Pill -->
+  <g transform="translate(80, 80)">
+    <rect width="320" height="38" rx="19" fill="#13151B" stroke="white" stroke-opacity="0.12"/>
+    <circle cx="20" cy="19" r="5" fill="#10B981"/>
+    <circle cx="20" cy="19" r="8" stroke="#10B981" stroke-opacity="0.4" stroke-width="2"/>
+    <text x="36" y="24" fill="#D0D6E0" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="500">
+      Disponible • Full Stack Engineer II
+    </text>
+  </g>
+
+  <!-- Monogram Logo Badge -->
+  <g transform="translate(1040, 70)">
+    <rect width="64" height="64" rx="18" fill="#0D0E12" stroke="white" stroke-opacity="0.15"/>
+    <text x="32" y="40" fill="#6366F1" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" text-anchor="middle">JP</text>
+  </g>
+
+  <!-- Name & Title -->
+  <text x="80" y="240" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="64" font-weight="800" letter-spacing="-2">
+    Jesús David Pérez Ferrer
+  </text>
+  
+  <text x="80" y="305" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="34" font-weight="600" letter-spacing="-0.5">
+    Desarrollador Full Stack II &amp; Ingeniero Mecatrónico
+  </text>
+
+  <text x="80" y="365" fill="#8A8F98" font-family="'Inter', sans-serif" font-size="20" font-weight="400" max-width="800">
+    Especializado en arquitecturas web escalables, PWAs con soporte offline y backend robusto en .NET 10.
+  </text>
+
+  <!-- Tech Badges Strip -->
+  <g transform="translate(80, 430)">
+    <!-- Badge 1: React 19 -->
+    <rect x="0" y="0" width="130" height="42" rx="10" fill="#13151B" stroke="#6366F1" stroke-opacity="0.4"/>
+    <text x="65" y="26" fill="#F7F8F8" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" text-anchor="middle">React 19</text>
+
+    <!-- Badge 2: .NET 10 -->
+    <rect x="145" y="0" width="130" height="42" rx="10" fill="#13151B" stroke="#6366F1" stroke-opacity="0.4"/>
+    <text x="210" y="26" fill="#F7F8F8" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" text-anchor="middle">.NET 10</text>
+
+    <!-- Badge 3: TypeScript -->
+    <rect x="290" y="0" width="145" height="42" rx="10" fill="#13151B" stroke="white" stroke-opacity="0.12"/>
+    <text x="362" y="26" fill="#D0D6E0" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" text-anchor="middle">TypeScript</text>
+
+    <!-- Badge 4: Clean Arch & CQRS -->
+    <rect x="450" y="0" width="200" height="42" rx="10" fill="#13151B" stroke="white" stroke-opacity="0.12"/>
+    <text x="550" y="26" fill="#D0D6E0" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" text-anchor="middle">Clean Arch &amp; CQRS</text>
+
+    <!-- Badge 5: PostgreSQL & Redis -->
+    <rect x="665" y="0" width="195" height="42" rx="10" fill="#13151B" stroke="white" stroke-opacity="0.12"/>
+    <text x="762" y="26" fill="#D0D6E0" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" text-anchor="middle">PostgreSQL &amp; Redis</text>
+
+    <!-- Badge 6: Docker CI/CD -->
+    <rect x="875" y="0" width="165" height="42" rx="10" fill="#13151B" stroke="white" stroke-opacity="0.12"/>
+    <text x="957" y="26" fill="#D0D6E0" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" text-anchor="middle">Docker &amp; CI/CD</text>
+  </g>
+
+  <!-- Footer Info -->
+  <g transform="translate(80, 550)">
+    <text x="0" y="0" fill="#62666D" font-family="'JetBrains Mono', monospace" font-size="14">
+      Asisya • Ex-Finanzauto • Ex-Kutai • Cartagena / Bogotá, Colombia
+    </text>
+    <text x="1040" y="0" fill="#6366F1" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" text-anchor="end">
+      Astro 5 + React 19
+    </text>
+  </g>
+</svg>

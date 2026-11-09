@@ -1,0 +1,110 @@
+---
+import { Code2, Server, Cloud, Cpu } from 'lucide-react';
+
+const categories = [
+  {
+    title: "Frontend Engineering",
+    icon: Code2,
+    color: "text-brand-accent",
+    skills: [
+      { name: "React 19 / React", level: "Senior / Core" },
+      { name: "Next.js", level: "Avanzado" },
+      { name: "TypeScript", level: "Avanzado (Generics & Type Guards)" },
+      { name: "Astro", level: "SSG & Islands" },
+      { name: "Vite 7", level: "Build Tooling" },
+      { name: "Tailwind CSS 4 / CSS3", level: "Avanzado" },
+      { name: "TanStack Query", level: "Server State" },
+      { name: "Zustand", level: "Client State" },
+      { name: "PWA / Workbox", level: "Offline Support" },
+      { name: "React Hook Form + Zod", level: "Type-safe Forms" },
+      { name: "Vitest / Testing Library", level: "Unit Testing" },
+      { name: "i18next", level: "Internacionalización" },
+    ]
+  },
+  {
+    title: "Backend & Clean Architecture",
+    icon: Server,
+    color: "text-brand",
+    skills: [
+      { name: ".NET 8 / .NET 10", level: "Core Stack" },
+      { name: "C#", level: "Avanzado" },
+      { name: "Clean Architecture", level: "Domain-Driven" },
+      { name: "CQRS (MediatR)", level: "Separation of Concerns" },
+      { name: "EF Core & Dapper", level: "High Performance ORM" },
+      { name: "Patrón Repository", level: "Enterprise Pattern" },
+      { name: "PostgreSQL", level: "Primary RDBMS" },
+      { name: "Redis", level: "Distributed Cache" },
+      { name: "MinIO (S3)", level: "Object Storage" },
+      { name: "FluentValidation", level: "Pipeline Behaviors" },
+      { name: "API REST & Webhooks", level: "Integration" },
+      { name: "xUnit", level: "Backend Testing" },
+    ]
+  },
+  {
+    title: "DevOps & Cloud Infrastructure",
+    icon: Cloud,
+    color: "text-purple-400",
+    skills: [
+      { name: "Docker & Containers", level: "Contenerización" },
+      { name: "CI/CD Pipelines", level: "GitOps & Automation" },
+      { name: "n8n Automation", level: "Webhook Orchestration" },
+      { name: "Linux Server", level: "Administración" },
+      { name: "Cloudflare Tunnel", level: "Zero Trust Ingress" },
+      { name: "Caddy / Nginx", level: "Reverse Proxy & SSL" },
+      { name: "Azure DevOps", level: "Enterprise Workflows" },
+      { name: "Git / GitHub", level: "Control de versiones" },
+    ]
+  }
+];
+---
+
+<section id="stack" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-24">
+  <div class="mb-12 text-center md:text-left">
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-brand/30 bg-brand/10 text-brand-hover text-xs font-mono font-medium mb-3">
+      <Cpu className="w-3.5 h-3.5" />
+      Arsenal Tecnológico
+    </div>
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink">
+      Tecnologías & Estándares
+    </h2>
+    <p class="text-ink-subtle text-base mt-2 max-w-2xl text-pretty">
+      Herramientas dominadas en proyectos de producción para garantizar código mantenible, tipado estricto y alto rendimiento.
+    </p>
+  </div>
+
+  <!-- Tech Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {categories.map((category) => {
+      const IconComponent = category.icon;
+      return (
+        <div class="p-6 sm:p-7 rounded-2xl border border-hairline bg-surface-1/80 backdrop-blur-md flex flex-col justify-between transition-all duration-300 hover:border-hairline-strong">
+          <div>
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-hairline">
+              <div class={`p-2.5 rounded-xl bg-surface-2 border border-white/5 ${category.color}`}>
+                <IconComponent className="w-5 h-5" />
+              </div>
+              <h3 class="text-lg font-bold text-ink">
+                {category.title}
+              </h3>
+            </div>
+
+            <!-- Skills List -->
+            <ul class="space-y-3">
+              {category.skills.map((skill) => (
+                <li class="flex items-center justify-between text-xs py-1 px-2 rounded-lg hover:bg-surface-2/60 transition-colors">
+                  <span class="font-medium text-ink flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand" />
+                    {skill.name}
+                  </span>
+                  <span class="text-[11px] font-mono text-ink-tertiary">
+                    {skill.level}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>

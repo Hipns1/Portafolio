@@ -1,0 +1,149 @@
+---
+import { Briefcase, Calendar, MapPin } from 'lucide-react';
+
+const experiences = [
+  {
+    role: "Desarrollador II (Full Stack)",
+    company: "Asisya",
+    location: "Bogotá, Colombia (Remoto)",
+    period: "2025-06 — Actualmente",
+    current: true,
+    description: "Desarrollo y liderazgo técnico full stack en plataformas empresariales de alto tráfico y operaciones críticas (PeritoYa y Muévelo).",
+    achievements: [
+      "Lideré la migración del frontend de PeritoYa a React 19, Vite 7 y Tailwind CSS 4, eliminando pérdidas y duplicaciones de datos offline en tablets con Web Locks.",
+      "Desarrollo full stack en .NET 10 bajo Clean Architecture, CQRS (MediatR), Repository Pattern, EF Core y Dapper sobre PostgreSQL con caché Redis.",
+      "Construcción integral de la plataforma de renting Muévelo: cotizador en tiempo real, panel de solicitudes, MinIO (S3) e integración con Google Sheets.",
+      "Implementación de controles de seguridad de nivel bancario: CSRF, IP rate limiting, firmas binarias de archivos, CSP y resolución de auditorías de Aikido y pentesting.",
+      "Diseño de pruebas unitarias y de integración documentadas con xUnit y Vitest bajo metodologías ágiles Scrum."
+    ],
+    stack: ["React 19", ".NET 10", "TypeScript", "Clean Arch", "CQRS", "PostgreSQL", "Redis", "Docker", "Vitest", "xUnit"]
+  },
+  {
+    role: "Semi-senior FrontEnd Developer",
+    company: "Ditech (Outsourcing para Finanzauto)",
+    location: "Bogotá, Colombia (Remoto)",
+    period: "2024-04 — 2025-05",
+    current: false,
+    description: "Desarrollo de portales y aplicaciones financieras a gran escala en colaboración con equipos interdisciplinarios.",
+    achievements: [
+      "Desarrollo de módulos interactivos de alta fidelidad con React.js, Vite y Tailwind CSS.",
+      "Implementación de estándares de código testeable, mantenible y accesible para servicios financieros.",
+      "Optimización de rendimiento frontend, reduciendo tiempos de carga y mejorando Core Web Vitals."
+    ],
+    stack: ["React.js", "Vite", "Tailwind CSS", "TypeScript", "HTML5/CSS3"]
+  },
+  {
+    role: "FrontEnd Developer",
+    company: "Kutai",
+    location: "Medellín, Colombia",
+    period: "2022-06 — 2024-02",
+    current: false,
+    description: "Creación de productos digitales, librerías de componentes y optimización de plataformas web.",
+    achievements: [
+      "Desarrollo de aplicaciones web con Next.js, TypeScript y SASS con consumo de APIs REST.",
+      "Construcción y publicación de librerías NPM internas de componentes UI utilizando React, StoryBook y Rollup.js.",
+      "Arquitectura de landing pages dinámicas impulsadas por JSON y optimización de SEO técnico."
+    ],
+    stack: ["Next.js", "TypeScript", "NPM Library", "StoryBook", "Rollup.js", "SASS"]
+  },
+  {
+    role: "FrontEnd Developer (Trainee)",
+    company: "Academia Geek",
+    location: "Medellín, Colombia",
+    period: "2022-02 — 2022-06",
+    current: false,
+    description: "El punto de partida en 2022: bootcamp intensivo de desarrollo web moderno.",
+    achievements: [
+      "Desarrollo de plataformas e-commerce con React.js, Redux y Firebase.",
+      "Maquetación precisa desde prototipos en Figma a código responsivo mobile-first utilizando SASS y React."
+    ],
+    stack: ["React.js", "Redux", "Firebase", "SASS", "Figma"]
+  }
+];
+---
+
+<section id="experiencia" class="py-20 px-4 sm:px-6 max-w-5xl mx-auto scroll-mt-24">
+  <div class="mb-12">
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-brand/30 bg-brand/10 text-brand-hover text-xs font-mono font-medium mb-3">
+      <Briefcase className="w-3.5 h-3.5" />
+      Trayectoria Profesional
+    </div>
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink">
+      Evolución & Experiencia Laboral
+    </h2>
+    <p class="text-ink-subtle text-base mt-2 max-w-2xl text-pretty">
+      Más de 4 años de progreso constante: desde trainee en 2022 hasta desarrollador Full Stack II liderando migraciones y arquitecturas críticas.
+    </p>
+  </div>
+
+  <!-- Timeline Container -->
+  <div class="relative border-l border-hairline-strong ml-3 sm:ml-4 pl-6 sm:pl-8 space-y-12">
+    {experiences.map((exp) => (
+      <div class="relative group">
+        <!-- Node indicator dot -->
+        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex items-center justify-center">
+          <div class={`w-4 h-4 rounded-full border-2 transition-transform duration-300 group-hover:scale-125 ${
+            exp.current
+              ? 'bg-brand border-brand-accent shadow-[0_0_12px_rgba(99,102,241,0.6)]'
+              : 'bg-surface-1 border-hairline-strong group-hover:border-brand-hover'
+          }`} />
+        </div>
+
+        <!-- Experience Card -->
+        <div class="p-6 sm:p-7 rounded-2xl border border-hairline bg-surface-1/70 backdrop-blur-sm transition-all duration-300 hover:border-hairline-strong hover:bg-surface-2/60">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 class="text-xl font-bold text-ink group-hover:text-white transition-colors">
+                  {exp.role}
+                </h3>
+                {exp.current && (
+                  <span class="px-2 py-0.5 text-[10px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
+                    Actual
+                  </span>
+                )}
+              </div>
+              <div class="text-brand-accent font-medium text-sm mt-0.5">
+                {exp.company}
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:items-end text-xs font-mono text-ink-subtle">
+              <span class="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-ink-tertiary" />
+                {exp.period}
+              </span>
+              <span class="flex items-center gap-1.5 text-ink-tertiary mt-0.5">
+                <MapPin className="w-3.5 h-3.5" />
+                {exp.location}
+              </span>
+            </div>
+          </div>
+
+          <p class="text-sm text-ink-muted mb-4 font-normal">
+            {exp.description}
+          </p>
+
+          <!-- Achievements List -->
+          <ul class="space-y-2 mb-6">
+            {exp.achievements.map(item => (
+              <li class="flex items-start gap-2.5 text-xs sm:text-sm text-ink-subtle leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0 mt-2" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <!-- Stack Tags -->
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-hairline">
+            {exp.stack.map(tag => (
+              <span class="px-2 py-0.5 text-[11px] font-mono text-ink-muted bg-surface-3/60 border border-hairline-subtle rounded-md">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

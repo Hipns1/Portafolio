@@ -1,0 +1,83 @@
+---
+import { Github, Linkedin, FileText } from 'lucide-react';
+---
+
+<header class="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-4xl">
+  <nav
+    class="flex items-center justify-between px-4 sm:px-6 py-2.5 rounded-full border border-white/10 bg-surface-1/80 backdrop-blur-xl shadow-2xl shadow-black/60 transition-all duration-300 hover:border-white/20"
+    aria-label="Navegación principal"
+  >
+    <!-- Logo & Status -->
+    <a href="#inicio" class="flex items-center gap-3 group focus-visible:ring-2 focus-visible:ring-brand rounded-full pr-2" aria-label="Ir al inicio">
+      <div class="relative w-8 h-8 rounded-full bg-gradient-to-tr from-brand to-brand-accent p-[1px] flex items-center justify-center transition-transform group-hover:scale-105">
+        <div class="w-full h-full bg-surface-1 rounded-full flex items-center justify-center">
+          <span class="font-mono text-xs font-bold text-ink">JP</span>
+        </div>
+      </div>
+      <div class="hidden sm:flex items-center gap-2">
+        <span class="text-xs font-medium text-ink-muted group-hover:text-ink transition-colors">Jesús Pérez</span>
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-medium font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Full Stack II
+        </span>
+      </div>
+    </a>
+
+    <!-- Navigation Links -->
+    <ul class="hidden md:flex items-center gap-6 text-xs font-medium text-ink-subtle">
+      <li>
+        <a href="#proyectos" class="hover:text-ink transition-colors duration-200">
+          Proyectos
+        </a>
+      </li>
+      <li>
+        <a href="#experiencia" class="hover:text-ink transition-colors duration-200">
+          Experiencia
+        </a>
+      </li>
+      <li>
+        <a href="#stack" class="hover:text-ink transition-colors duration-200">
+          Stack
+        </a>
+      </li>
+      <li>
+        <a href="#contacto" class="hover:text-ink transition-colors duration-200">
+          Contacto
+        </a>
+      </li>
+    </ul>
+
+    <!-- Quick Actions (CV + Socials) -->
+    <div class="flex items-center gap-2 sm:gap-3">
+      <a
+        href="https://github.com/Hipns1"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-2 text-ink-subtle hover:text-ink hover:bg-white/5 rounded-full transition-colors focus-visible:ring-2 focus-visible:ring-brand"
+        aria-label="Perfil de GitHub"
+      >
+        <Github className="w-4 h-4" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/jesusperez-ferrer/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="p-2 text-ink-subtle hover:text-ink hover:bg-white/5 rounded-full transition-colors focus-visible:ring-2 focus-visible:ring-brand"
+        aria-label="Perfil de LinkedIn"
+      >
+        <Linkedin className="w-4 h-4" />
+      </a>
+      
+      <!-- Resume CTA -->
+      <a
+        href="/Jesus_Perez_HV_Desarrollador_I.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium text-ink bg-white/10 hover:bg-white/15 border border-white/15 hover:border-brand/50 rounded-full transition-all duration-200 shadow-sm active:scale-95 focus-visible:ring-2 focus-visible:ring-brand"
+      >
+        <FileText className="w-3.5 h-3.5 text-brand-accent" />
+        <span class="hidden sm:inline">Descargar</span> CV
+      </a>
+    </div>
+  </nav>
+</header>
