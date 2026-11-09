@@ -85,7 +85,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://portafol
 
     <ClientRouter />
   </head>
-  <body class="bg-canvas text-ink font-sans selection:bg-brand/30 selection:text-white relative min-h-screen">
+  <body class="bg-slate-50 dark:bg-[#090a0f] text-slate-900 dark:text-slate-100 font-sans selection:bg-brand/30 selection:text-white relative min-h-screen transition-colors duration-300">
     <!-- Skip to main content link for keyboard accessibility (web-design-guidelines) -->
     <a
       href="#main-content"
@@ -94,16 +94,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://portafol
       Saltar al contenido principal
     </a>
 
-    <!-- Ambient mesh lighting layers (Linear design aesthetic) -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <!-- Ambient mesh lighting layers -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-40 dark:opacity-100 transition-opacity duration-300">
       <!-- Deep subtle indigo glow top center -->
-      <div class="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-indigo-600/10 blur-[130px] rounded-full"></div>
+      <div class="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-indigo-600/10 dark:bg-indigo-600/15 blur-[130px] rounded-full"></div>
       <!-- Soft cyan glow on bottom right -->
-      <div class="absolute top-[40%] -right-[10%] w-[500px] h-[600px] bg-sky-500/5 blur-[150px] rounded-full"></div>
+      <div class="absolute top-[40%] -right-[10%] w-[500px] h-[600px] bg-sky-500/10 dark:bg-sky-500/5 blur-[150px] rounded-full"></div>
       <!-- Subtle purple glow bottom left -->
-      <div class="absolute top-[70%] -left-[10%] w-[600px] h-[600px] bg-purple-600/5 blur-[160px] rounded-full"></div>
+      <div class="absolute top-[70%] -left-[10%] w-[600px] h-[600px] bg-purple-600/10 dark:bg-purple-600/5 blur-[160px] rounded-full"></div>
       <!-- Subtle noise layer for visual depth without banding -->
-      <div class="absolute inset-0 bg-noise opacity-30 mix-blend-overlay"></div>
+      <div class="absolute inset-0 bg-noise opacity-20 dark:opacity-30 mix-blend-overlay"></div>
     </div>
 
     <!-- Main Content Container -->

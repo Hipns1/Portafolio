@@ -2,7 +2,7 @@
 import SpotlightCard from '../ui/SpotlightCard.tsx';
 import InteractiveArchitecture from '../ui/InteractiveArchitecture.tsx';
 import InteractiveTerminal from '../ui/InteractiveTerminal.tsx';
-import { GitBranch, Shield, Zap, Server, Database, Smartphone, CheckCircle2, Lock, ArrowUpRight, Terminal } from 'lucide-react';
+import { Shield, Zap, CheckCircle2, Terminal } from 'lucide-react';
 ---
 
 <section id="proyectos" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-24">
@@ -12,17 +12,17 @@ import { GitBranch, Shield, Zap, Server, Database, Smartphone, CheckCircle2, Loc
         <Zap className="w-3.5 h-3.5" />
         Sistemas en Producción
       </div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink">
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
         Arquitectura & Proyectos Clave
       </h2>
-      <p class="text-ink-subtle text-sm sm:text-base mt-2 max-w-xl text-pretty">
+      <p class="text-slate-600 dark:text-zinc-400 text-sm sm:text-base mt-2 max-w-xl text-pretty">
         Explora interactivamente los flujos de datos, la resiliencia offline y la automatización CI/CD.
       </p>
     </div>
 
     <!-- Live indicator badge -->
-    <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-2 border border-hairline text-xs font-mono text-ink-muted">
-      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+    <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/10 text-xs font-mono text-slate-700 dark:text-zinc-300 shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
       <span>3 Sistemas en producción activa</span>
     </div>
   </div>
@@ -43,36 +43,36 @@ import { GitBranch, Shield, Zap, Server, Database, Smartphone, CheckCircle2, Loc
     >
       <div>
         <div class="flex items-center justify-between mb-4">
-          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-sky-400 bg-sky-500/10 border border-sky-500/20 rounded-md">
+          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-500/10 border border-sky-500/20 rounded-md">
             Full Stack Renting
           </span>
-          <span class="text-xs font-mono text-ink-tertiary">Asisya</span>
+          <span class="text-xs font-mono text-slate-500 dark:text-zinc-500">Asisya</span>
         </div>
 
-        <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-white transition-colors">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-brand-accent transition-colors">
           Muévelo: Cotizador &amp; Renting
         </h3>
 
-        <p class="text-ink-subtle text-xs sm:text-sm leading-relaxed mb-4">
+        <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm leading-relaxed mb-4">
           Sitio público, cotizador en vivo y panel administrativo.
         </p>
 
         <!-- Visual Metrics Chips -->
         <div class="grid grid-cols-2 gap-2 mb-4">
-          <div class="p-2.5 rounded-lg bg-surface-2/80 border border-white/5 text-center">
+          <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200/80 dark:border-white/5 text-center">
             <div class="text-sm font-bold text-brand-accent font-mono">React 19</div>
-            <div class="text-[10px] text-ink-tertiary">Frontend Ágil</div>
+            <div class="text-[10px] text-slate-500 dark:text-zinc-500">Frontend Ágil</div>
           </div>
-          <div class="p-2.5 rounded-lg bg-surface-2/80 border border-white/5 text-center">
-            <div class="text-sm font-bold text-indigo-400 font-mono">.NET 10</div>
-            <div class="text-[10px] text-ink-tertiary">CQRS + MinIO</div>
+          <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200/80 dark:border-white/5 text-center">
+            <div class="text-sm font-bold text-indigo-600 dark:text-indigo-400 font-mono">.NET 10</div>
+            <div class="text-[10px] text-slate-500 dark:text-zinc-500">CQRS + MinIO</div>
           </div>
         </div>
       </div>
 
-      <div class="pt-3 border-t border-hairline flex flex-wrap gap-1.5">
+      <div class="pt-3 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5">
         {['React 19', '.NET 10', 'MinIO (S3)', 'PostgreSQL'].map(tag => (
-          <span class="px-2 py-0.5 text-[10px] font-mono text-ink-muted bg-surface-3/80 rounded">
+          <span class="px-2 py-0.5 text-[10px] font-mono text-slate-700 dark:text-zinc-300 bg-slate-100 dark:bg-zinc-800 rounded">
             {tag}
           </span>
         ))}
@@ -87,39 +87,39 @@ import { GitBranch, Shield, Zap, Server, Database, Smartphone, CheckCircle2, Loc
     >
       <div>
         <div class="flex items-center justify-between mb-4">
-          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
+          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
             Seguridad &amp; Pentesting
           </span>
-          <Shield className="w-4 h-4 text-emerald-400" />
+          <Shield className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
         </div>
 
-        <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-white transition-colors">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
           Controles de Seguridad
         </h3>
 
-        <p class="text-ink-subtle text-xs sm:text-sm leading-relaxed mb-4">
+        <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm leading-relaxed mb-4">
           Auditorías de pentesting resueltas con protección bancaria:
         </p>
 
-        <ul class="space-y-1.5 mb-4 text-xs font-mono text-ink-muted">
+        <ul class="space-y-1.5 mb-4 text-xs font-mono text-slate-600 dark:text-zinc-400">
           <li class="flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
             <span>Rate limiting por IP + CSRF</span>
           </li>
           <li class="flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
             <span>Validación de firmas binarias</span>
           </li>
           <li class="flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
             <span>Auditorías con Aikido</span>
           </li>
         </ul>
       </div>
 
-      <div class="pt-3 border-t border-hairline flex flex-wrap gap-1.5">
+      <div class="pt-3 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5">
         {['xUnit', 'Vitest', 'CSP Headers', 'Role RBAC'].map(tag => (
-          <span class="px-2 py-0.5 text-[10px] font-mono text-ink-muted bg-surface-3/80 rounded">
+          <span class="px-2 py-0.5 text-[10px] font-mono text-slate-700 dark:text-zinc-300 bg-slate-100 dark:bg-zinc-800 rounded">
             {tag}
           </span>
         ))}
@@ -134,31 +134,31 @@ import { GitBranch, Shield, Zap, Server, Database, Smartphone, CheckCircle2, Loc
     >
       <div>
         <div class="flex items-center justify-between mb-4">
-          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-purple-400 bg-purple-500/10 border border-purple-500/20 rounded-md">
+          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400 bg-purple-500/10 border border-purple-500/20 rounded-md">
             Formación
           </span>
-          <span class="text-xs font-mono text-ink-tertiary">Cartagena / UTB</span>
+          <span class="text-xs font-mono text-slate-500 dark:text-zinc-500">Cartagena / UTB</span>
         </div>
 
-        <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-white transition-colors">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
           Ingeniería Mecatrónica
         </h3>
 
-        <p class="text-ink-subtle text-xs sm:text-sm leading-relaxed mb-4">
+        <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm leading-relaxed mb-4">
           La formación en sistemas de control y programación aporta disciplina para diseñar arquitecturas tolerantes a fallos.
         </p>
 
-        <div class="p-2.5 rounded-lg bg-surface-2/80 border border-white/5 text-[11px] font-mono text-ink-muted space-y-1">
+        <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200/80 dark:border-white/5 text-[11px] font-mono text-slate-600 dark:text-zinc-400 space-y-1">
           <div>&bull; Idiomas: Español (Nativo), Inglés (B2)</div>
           <div>&bull; Scrum Certified</div>
         </div>
       </div>
 
-      <div class="pt-3 border-t border-hairline flex flex-wrap gap-1.5">
-        <span class="px-2 py-0.5 text-[10px] font-mono text-emerald-400 bg-emerald-500/10 rounded">
+      <div class="pt-3 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5">
+        <span class="px-2 py-0.5 text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 rounded">
           Clean Code
         </span>
-        <span class="px-2 py-0.5 text-[10px] font-mono text-ink-muted bg-surface-3/80 rounded">
+        <span class="px-2 py-0.5 text-[10px] font-mono text-slate-700 dark:text-zinc-300 bg-slate-100 dark:bg-zinc-800 rounded">
           Sistemas de Control
         </span>
       </div>
@@ -170,7 +170,7 @@ import { GitBranch, Shield, Zap, Server, Database, Smartphone, CheckCircle2, Loc
   <div class="mt-8">
     <div class="flex items-center gap-2 mb-3">
       <Terminal className="w-4 h-4 text-brand" />
-      <span class="text-xs font-mono font-semibold text-ink uppercase tracking-wider">
+      <span class="text-xs font-mono font-semibold text-slate-900 dark:text-white uppercase tracking-wider">
         Consola de Comandos Interactiva
       </span>
     </div>

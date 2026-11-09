@@ -1,0 +1,42 @@
+---
+import { Sun, Moon } from 'lucide-react';
+---
+
+<button
+  id="theme-toggle"
+  type="button"
+  aria-label="Alternar tema claro y oscuro"
+  title="Alternar tema claro y oscuro"
+  class="relative p-2 rounded-full text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-zinc-800 border border-slate-200 dark:border-white/10 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-brand active:scale-90"
+>
+  <!-- Sun icon (shown in dark mode) -->
+  <span class="dark:inline hidden">
+    <Sun className="w-4 h-4 text-amber-400" />
+  </span>
+  <!-- Moon icon (shown in light mode) -->
+  <span class="dark:hidden inline">
+    <Moon className="w-4 h-4 text-indigo-600" />
+  </span>
+</button>
+
+<script is:inline>
+  function setupThemeToggle() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (!toggleBtn) return;
+
+    toggleBtn.onclick = () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    };
+  }
+
+  // Initialize immediately and on View Transitions page swap
+  setupThemeToggle();
+  document.addEventListener('astro:after-swap', setupThemeToggle);
+</script>

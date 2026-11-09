@@ -1,5 +1,5 @@
 ---
-import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
 
 const experiences = [
   {
@@ -64,16 +64,16 @@ const experiences = [
       <Briefcase className="w-3.5 h-3.5" />
       Trayectoria Profesional
     </div>
-    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
       Evolución & Experiencia
     </h2>
-    <p class="text-ink-subtle text-sm sm:text-base mt-2 max-w-xl text-pretty">
+    <p class="text-slate-600 dark:text-zinc-400 text-sm sm:text-base mt-2 max-w-xl text-pretty">
       Más de 4 años de progreso constante: desde trainee en 2022 hasta desarrollador Full Stack liderando migraciones y arquitecturas críticas.
     </p>
   </div>
 
   <!-- Interactive Timeline with Compact Visual Cards -->
-  <div class="relative border-l border-hairline-strong ml-3 sm:ml-4 pl-6 sm:pl-8 space-y-8">
+  <div class="relative border-l border-slate-200 dark:border-white/10 ml-3 sm:ml-4 pl-6 sm:pl-8 space-y-8">
     {experiences.map((exp) => (
       <div class="relative group">
         <!-- Node indicator dot -->
@@ -81,35 +81,35 @@ const experiences = [
           <div class={`w-4 h-4 rounded-full border-2 transition-transform duration-300 group-hover:scale-125 ${
             exp.current
               ? 'bg-brand border-brand-accent shadow-[0_0_12px_rgba(99,102,241,0.6)]'
-              : 'bg-surface-1 border-hairline-strong group-hover:border-brand-hover'
+              : 'bg-white dark:bg-zinc-900 border-slate-300 dark:border-white/20 group-hover:border-brand-hover'
           }`} />
         </div>
 
         <!-- Experience Card -->
-        <div class="p-5 sm:p-6 rounded-2xl border border-hairline bg-surface-1/70 backdrop-blur-sm transition-all duration-300 hover:border-hairline-strong hover:bg-surface-2/60">
+        <div class="p-5 sm:p-6 rounded-2xl border border-slate-200/80 dark:border-white/10 bg-white/90 dark:bg-zinc-900/80 backdrop-blur-sm shadow-sm dark:shadow-md transition-all duration-300 hover:border-slate-300 dark:hover:border-white/20">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
             <div>
               <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="text-lg sm:text-xl font-bold text-ink group-hover:text-white transition-colors">
+                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-accent transition-colors">
                   {exp.role}
                 </h3>
                 <span class="px-2 py-0.5 text-[10px] font-mono font-semibold text-brand-accent bg-brand-accent/10 border border-brand-accent/20 rounded-md">
                   {exp.impactBadge}
                 </span>
                 {exp.current && (
-                  <span class="px-2 py-0.5 text-[10px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
+                  <span class="px-2 py-0.5 text-[10px] font-mono font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
                     Actual
                   </span>
                 )}
               </div>
-              <div class="text-ink-muted font-medium text-xs sm:text-sm mt-0.5">
+              <div class="text-slate-600 dark:text-zinc-300 font-medium text-xs sm:text-sm mt-0.5">
                 {exp.company}
               </div>
             </div>
 
-            <div class="flex items-center gap-3 text-xs font-mono text-ink-subtle">
+            <div class="flex items-center gap-3 text-xs font-mono text-slate-500 dark:text-zinc-400">
               <span class="flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5 text-ink-tertiary" />
+                <Calendar className="w-3.5 h-3.5" />
                 {exp.period}
               </span>
             </div>
@@ -118,7 +118,7 @@ const experiences = [
           <!-- Key Highlights -->
           <ul class="space-y-1.5 mb-4">
             {exp.highlights.map(item => (
-              <li class="flex items-start gap-2 text-xs sm:text-sm text-ink-subtle leading-relaxed">
+              <li class="flex items-start gap-2 text-xs sm:text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
                 <CheckCircle2 className="w-3.5 h-3.5 text-brand shrink-0 mt-0.5" />
                 <span>{item}</span>
               </li>
@@ -126,9 +126,9 @@ const experiences = [
           </ul>
 
           <!-- Stack Tags -->
-          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-hairline">
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-200/80 dark:border-white/10">
             {exp.stack.map(tag => (
-              <span class="px-2 py-0.5 text-[10px] font-mono text-ink-muted bg-surface-3/60 rounded">
+              <span class="px-2 py-0.5 text-[10px] font-mono text-slate-700 dark:text-zinc-300 bg-slate-100 dark:bg-zinc-800 rounded">
                 {tag}
               </span>
             ))}

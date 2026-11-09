@@ -4,24 +4,24 @@ import { ArrowRight, Download, Terminal, Layers, ShieldCheck, Cpu } from 'lucide
 
 <section id="inicio" class="relative pt-36 pb-20 md:pt-44 md:pb-28 px-4 sm:px-6 max-w-5xl mx-auto text-center">
   <!-- Status Badge -->
-  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-hairline bg-surface-2/80 backdrop-blur-md mb-8 animate-fade-in shadow-inner">
+  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md mb-8 animate-fade-in shadow-sm dark:shadow-inner">
     <span class="relative flex h-2 w-2">
       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
       <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
     </span>
-    <span class="text-xs font-mono font-medium text-ink-muted">
+    <span class="text-xs font-mono font-medium text-slate-600 dark:text-zinc-400">
       Desarrollador Full Stack &bull; React &bull; .NET &bull; Cloud
     </span>
   </div>
 
   <!-- Main Headline -->
-  <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-ink max-w-4xl mx-auto leading-[1.1] mb-6 text-balance">
+  <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-4xl mx-auto leading-[1.1] mb-6 text-balance">
     Hola, soy <span class="text-slate-900 dark:text-white">Jesús Pérez</span>.<br/>
     <span class="bg-gradient-to-r from-brand via-brand-hover to-brand-accent bg-clip-text text-transparent">Desarrollador Full Stack</span>.
   </h1>
 
   <!-- Bio based directly on his CV -->
-  <p class="text-base sm:text-lg md:text-xl text-ink-subtle max-w-3xl mx-auto font-normal leading-relaxed mb-10 text-pretty">
+  <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-zinc-400 max-w-3xl mx-auto font-normal leading-relaxed mb-10 text-pretty">
     Más de 4 años de experiencia construyendo aplicaciones web con <strong>React, Next.js y TypeScript</strong> en el frontend, y servicios backend con <strong>.NET 8 y .NET 10</strong> bajo Clean Architecture, CQRS y arquitectura hexagonal. Enfocado en arquitecturas mantenibles, calidad de código y automatización con Docker y CI/CD.
   </p>
 
@@ -39,7 +39,7 @@ import { ArrowRight, Download, Terminal, Layers, ShieldCheck, Cpu } from 'lucide
       href="/Jesus_Perez_HV_Desarrollador_I.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-ink bg-surface-2/90 hover:bg-surface-3 border border-hairline hover:border-hairline-strong rounded-xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+      class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-slate-800 dark:text-white bg-white dark:bg-zinc-900 hover:bg-slate-100 dark:hover:bg-zinc-800 border border-slate-200 dark:border-white/10 rounded-xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-sm"
     >
       <Download className="w-4 h-4 text-brand-accent" />
       Descargar CV (PDF)
@@ -48,40 +48,40 @@ import { ArrowRight, Download, Terminal, Layers, ShieldCheck, Cpu } from 'lucide
 
   <!-- Tech Highlights Strip -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto text-left">
-    <div class="p-4 rounded-xl border border-hairline bg-surface-1/50 backdrop-blur-sm">
+    <div class="p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/60 shadow-sm backdrop-blur-sm">
       <div class="flex items-center gap-2 text-brand-accent mb-1">
         <Layers className="w-4 h-4" />
-        <span class="font-mono text-xs text-ink-tertiary">Frontend</span>
+        <span class="font-mono text-xs text-slate-500 dark:text-zinc-500">Frontend</span>
       </div>
-      <div class="font-semibold text-sm text-ink">React 19 & Next.js</div>
-      <div class="text-[11px] text-ink-subtle">TypeScript, PWA & Tailwind</div>
+      <div class="font-semibold text-sm text-slate-900 dark:text-white">React 19 & Next.js</div>
+      <div class="text-[11px] text-slate-500 dark:text-zinc-400">TypeScript, PWA & Tailwind</div>
     </div>
 
-    <div class="p-4 rounded-xl border border-hairline bg-surface-1/50 backdrop-blur-sm">
+    <div class="p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/60 shadow-sm backdrop-blur-sm">
       <div class="flex items-center gap-2 text-brand mb-1">
         <Terminal className="w-4 h-4" />
-        <span class="font-mono text-xs text-ink-tertiary">Backend</span>
+        <span class="font-mono text-xs text-slate-500 dark:text-zinc-500">Backend</span>
       </div>
-      <div class="font-semibold text-sm text-ink">.NET 8 & 10</div>
-      <div class="text-[11px] text-ink-subtle">Clean Arch, CQRS & Redis</div>
+      <div class="font-semibold text-sm text-slate-900 dark:text-white">.NET 8 & 10</div>
+      <div class="text-[11px] text-slate-500 dark:text-zinc-400">Clean Arch, CQRS & Redis</div>
     </div>
 
-    <div class="p-4 rounded-xl border border-hairline bg-surface-1/50 backdrop-blur-sm">
-      <div class="flex items-center gap-2 text-emerald-400 mb-1">
+    <div class="p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/60 shadow-sm backdrop-blur-sm">
+      <div class="flex items-center gap-2 text-emerald-500 dark:text-emerald-400 mb-1">
         <ShieldCheck className="w-4 h-4" />
-        <span class="font-mono text-xs text-ink-tertiary">Seguridad</span>
+        <span class="font-mono text-xs text-slate-500 dark:text-zinc-500">Seguridad</span>
       </div>
-      <div class="font-semibold text-sm text-ink">Controles & Pentesting</div>
-      <div class="text-[11px] text-ink-subtle">Rate limit, CSRF, Aikido</div>
+      <div class="font-semibold text-sm text-slate-900 dark:text-white">Controles & Pentesting</div>
+      <div class="text-[11px] text-slate-500 dark:text-zinc-400">Rate limit, CSRF, Aikido</div>
     </div>
 
-    <div class="p-4 rounded-xl border border-hairline bg-surface-1/50 backdrop-blur-sm">
-      <div class="flex items-center gap-2 text-indigo-400 mb-1">
+    <div class="p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/60 shadow-sm backdrop-blur-sm">
+      <div class="flex items-center gap-2 text-indigo-500 dark:text-indigo-400 mb-1">
         <Cpu className="w-4 h-4" />
-        <span class="font-mono text-xs text-ink-tertiary">DevOps</span>
+        <span class="font-mono text-xs text-slate-500 dark:text-zinc-500">DevOps</span>
       </div>
-      <div class="font-semibold text-sm text-ink">CI/CD & Docker</div>
-      <div class="text-[11px] text-ink-subtle">n8n, Cloudflare & Linux</div>
+      <div class="font-semibold text-sm text-slate-900 dark:text-white">CI/CD & Docker</div>
+      <div class="text-[11px] text-slate-500 dark:text-zinc-400">n8n, Cloudflare & Linux</div>
     </div>
   </div>
 </section>

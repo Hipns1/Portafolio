@@ -2,19 +2,19 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="border-t border-hairline py-8 px-4 sm:px-6 mt-auto">
-  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-tertiary">
+<footer class="border-t border-slate-200 dark:border-white/10 py-8 px-4 sm:px-6 mt-auto bg-slate-50/50 dark:bg-[#090a0f]/50 transition-colors">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-zinc-500">
     <div class="flex items-center gap-2">
-      <span class="font-mono font-bold text-ink">JP</span>
+      <span class="font-mono font-bold text-slate-900 dark:text-white">JP</span>
       <span>&copy; {currentYear} Jesús David Pérez Ferrer. Todos los derechos reservados.</span>
     </div>
 
     <div class="flex items-center gap-4 font-mono text-[11px]">
-      <span>Construido con <strong class="text-ink-muted">Astro</strong></span>
+      <span>Construido con <strong class="text-slate-700 dark:text-zinc-300">Astro</strong></span>
       <span>&bull;</span>
-      <span><strong class="text-ink-muted">React 19</strong></span>
+      <span><strong class="text-slate-700 dark:text-zinc-300">React 19</strong></span>
       <span>&bull;</span>
-      <span><strong class="text-ink-muted">Tailwind CSS</strong></span>
+      <span><strong class="text-slate-700 dark:text-zinc-300">Tailwind CSS</strong></span>
     </div>
   </div>
 </footer>
