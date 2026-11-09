@@ -2,123 +2,121 @@
 import SpotlightCard from '../ui/SpotlightCard.tsx';
 import InteractiveArchitecture from '../ui/InteractiveArchitecture.tsx';
 import InteractiveTerminal from '../ui/InteractiveTerminal.tsx';
-import { Shield, Zap, CheckCircle2, Terminal } from 'lucide-react';
+import { Shield, Zap, Terminal, ArrowUpRight, CheckCircle2, Server, Smartphone, Lock } from 'lucide-react';
 ---
 
 <section id="proyectos" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-24">
+  <!-- Section Title & Context -->
   <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
     <div>
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-brand/30 bg-brand/10 text-brand-hover text-xs font-mono font-medium mb-3">
-        <Zap className="w-3.5 h-3.5" />
-        Sistemas en Producción
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200/90 dark:border-white/10 bg-white/80 dark:bg-zinc-900/80 text-xs font-mono font-medium text-slate-700 dark:text-zinc-300 mb-3 shadow-sm">
+        <Zap className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+        Sistemas &amp; Arquitectura
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-        Arquitectura & Proyectos Clave
+        Proyectos Clave en Producción
       </h2>
-      <p class="text-slate-600 dark:text-zinc-400 text-sm sm:text-base mt-2 max-w-xl text-pretty">
-        Explora interactivamente los flujos de datos, la resiliencia offline y la automatización CI/CD.
+      <p class="text-slate-600 dark:text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl text-pretty">
+        Soluciones integrales diseñadas para resolver desafíos técnicos críticos: resiliencia offline en campo, motores de cotización en vivo y despliegues automatizados.
       </p>
     </div>
 
-    <!-- Live indicator badge -->
-    <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/10 text-xs font-mono text-slate-700 dark:text-zinc-300 shadow-sm">
-      <span class="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
-      <span>3 Sistemas en producción activa</span>
+    <!-- Active Production Badge -->
+    <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200/90 dark:border-white/10 text-xs font-mono text-slate-700 dark:text-zinc-300 shadow-sm shrink-0">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>3 Sistemas activos en producción</span>
     </div>
   </div>
 
-  <!-- INTERACTIVE SYSTEM EXPLORER WIDGET (FLAGSHIP) -->
+  <!-- FLAGSHIP INTERACTIVE ARCHITECTURE SIMULATOR -->
   <div class="mb-8">
     <InteractiveArchitecture client:visible />
   </div>
 
-  <!-- BENTO GRID CARDS -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+  <!-- EDITORIAL CASE STUDIES GRID (3 COLUMNS) -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
     
-    <!-- CARD 1: Muévelo Renting Engine -->
+    <!-- CASE STUDY 1: PERITOYA -->
     <SpotlightCard
       client:visible
       className="p-6 sm:p-7 flex flex-col justify-between group"
-      spotlightColor="rgba(56, 189, 248, 0.15)"
+      spotlightColor="rgba(56, 189, 248, 0.12)"
     >
       <div>
         <div class="flex items-center justify-between mb-4">
-          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-500/10 border border-sky-500/20 rounded-md">
+          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-400 bg-sky-500/10 border border-sky-500/20 rounded-md">
+            PWA Offline-First
+          </span>
+          <span class="text-xs font-mono text-slate-500 dark:text-zinc-500">Asisya</span>
+        </div>
+
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+          PeritoYa: Peritajes en Campo
+        </h3>
+
+        <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm leading-relaxed mb-4">
+          Migración técnica a React 19 y arquitectura offline con Web Locks API para eliminar pérdida de datos y duplicidad entre pestañas de inspectores.
+        </p>
+
+        <!-- Technical Achievements List -->
+        <ul class="space-y-2 mb-6 text-xs text-slate-600 dark:text-zinc-400">
+          <li class="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-sky-600 dark:text-sky-400 shrink-0 mt-0.5" />
+            <span>Sincronización coordinada sin conflicto de tokens</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-sky-600 dark:text-sky-400 shrink-0 mt-0.5" />
+            <span>Backend en .NET 10 con CQRS y caché Redis</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pt-4 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5">
+        {['React 19', '.NET 10', 'Web Locks', 'PostgreSQL', 'Redis'].map(tag => (
+          <span class="px-2 py-0.5 text-[10px] font-mono text-slate-700 dark:text-zinc-300 bg-slate-100 dark:bg-zinc-800 rounded">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </SpotlightCard>
+
+    <!-- CASE STUDY 2: MUÉVELO RENTING -->
+    <SpotlightCard
+      client:visible
+      className="p-6 sm:p-7 flex flex-col justify-between group"
+      spotlightColor="rgba(99, 102, 241, 0.12)"
+    >
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 rounded-md">
             Full Stack Renting
           </span>
           <span class="text-xs font-mono text-slate-500 dark:text-zinc-500">Asisya</span>
         </div>
 
-        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-brand-accent transition-colors">
-          Muévelo: Cotizador &amp; Renting
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+          Muévelo: Cotizador &amp; SaaS
         </h3>
 
         <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm leading-relaxed mb-4">
-          Sitio público, cotizador en vivo y panel administrativo.
+          Portal público, cotizador de cuotas en tiempo real y panel de administración integral con almacenamiento de documentos en MinIO S3 y automatización.
         </p>
 
-        <!-- Visual Metrics Chips -->
-        <div class="grid grid-cols-2 gap-2 mb-4">
-          <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200/80 dark:border-white/5 text-center">
-            <div class="text-sm font-bold text-brand-accent font-mono">React 19</div>
-            <div class="text-[10px] text-slate-500 dark:text-zinc-500">Frontend Ágil</div>
-          </div>
-          <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200/80 dark:border-white/5 text-center">
-            <div class="text-sm font-bold text-indigo-600 dark:text-indigo-400 font-mono">.NET 10</div>
-            <div class="text-[10px] text-slate-500 dark:text-zinc-500">CQRS + MinIO</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pt-3 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5">
-        {['React 19', '.NET 10', 'MinIO (S3)', 'PostgreSQL'].map(tag => (
-          <span class="px-2 py-0.5 text-[10px] font-mono text-slate-700 dark:text-zinc-300 bg-slate-100 dark:bg-zinc-800 rounded">
-            {tag}
-          </span>
-        ))}
-      </div>
-    </SpotlightCard>
-
-    <!-- CARD 2: Seguridad & Hardening -->
-    <SpotlightCard
-      client:visible
-      className="p-6 sm:p-7 flex flex-col justify-between group"
-      spotlightColor="rgba(16, 185, 129, 0.15)"
-    >
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
-            Seguridad &amp; Pentesting
-          </span>
-          <Shield className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
-        </div>
-
-        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-          Controles de Seguridad
-        </h3>
-
-        <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm leading-relaxed mb-4">
-          Auditorías de pentesting resueltas con protección bancaria:
-        </p>
-
-        <ul class="space-y-1.5 mb-4 text-xs font-mono text-slate-600 dark:text-zinc-400">
-          <li class="flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
-            <span>Rate limiting por IP + CSRF</span>
+        <!-- Technical Achievements List -->
+        <ul class="space-y-2 mb-6 text-xs text-slate-600 dark:text-zinc-400">
+          <li class="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
+            <span>Motor de cotización dinámico con validación server-side</span>
           </li>
-          <li class="flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
-            <span>Validación de firmas binarias</span>
-          </li>
-          <li class="flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
-            <span>Auditorías con Aikido</span>
+          <li class="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
+            <span>Integración automatizada con Google Sheets API</span>
           </li>
         </ul>
       </div>
 
-      <div class="pt-3 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5">
-        {['xUnit', 'Vitest', 'CSP Headers', 'Role RBAC'].map(tag => (
+      <div class="pt-4 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5">
+        {['React 19', '.NET 10', 'MinIO (S3)', 'Clean Arch', 'Dapper'].map(tag => (
           <span class="px-2 py-0.5 text-[10px] font-mono text-slate-700 dark:text-zinc-300 bg-slate-100 dark:bg-zinc-800 rounded">
             {tag}
           </span>
@@ -126,52 +124,58 @@ import { Shield, Zap, CheckCircle2, Terminal } from 'lucide-react';
       </div>
     </SpotlightCard>
 
-    <!-- CARD 3: Background & Mentalidad Mecatrónica -->
+    <!-- CASE STUDY 3: GITOPS & HARDENING -->
     <SpotlightCard
       client:visible
       className="p-6 sm:p-7 flex flex-col justify-between group"
-      spotlightColor="rgba(168, 85, 247, 0.15)"
+      spotlightColor="rgba(16, 185, 129, 0.12)"
     >
       <div>
         <div class="flex items-center justify-between mb-4">
-          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400 bg-purple-500/10 border border-purple-500/20 rounded-md">
-            Formación
+          <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-md">
+            DevOps &amp; Seguridad
           </span>
-          <span class="text-xs font-mono text-slate-500 dark:text-zinc-500">Cartagena / UTB</span>
+          <Shield className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
         </div>
 
-        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-          Ingeniería Mecatrónica
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+          Infraestructura &amp; Hardening
         </h3>
 
         <p class="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm leading-relaxed mb-4">
-          La formación en sistemas de control y programación aporta disciplina para diseñar arquitecturas tolerantes a fallos.
+          Pipeline autohospedado en servidor Linux con orquestación n8n, contenedores Docker aislados, Cloudflare Tunnel y resolución de pentesting Aikido.
         </p>
 
-        <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-zinc-900/80 border border-slate-200/80 dark:border-white/5 text-[11px] font-mono text-slate-600 dark:text-zinc-400 space-y-1">
-          <div>&bull; Idiomas: Español (Nativo), Inglés (B2)</div>
-          <div>&bull; Scrum Certified</div>
-        </div>
+        <!-- Technical Achievements List -->
+        <ul class="space-y-2 mb-6 text-xs text-slate-600 dark:text-zinc-400">
+          <li class="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+            <span>Rate limiting por IP y validación de firmas binarias</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+            <span>Despliegues sin tiempo de inactividad con Caddy</span>
+          </li>
+        </ul>
       </div>
 
-      <div class="pt-3 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5">
-        <span class="px-2 py-0.5 text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 rounded">
-          Clean Code
-        </span>
-        <span class="px-2 py-0.5 text-[10px] font-mono text-slate-700 dark:text-zinc-300 bg-slate-100 dark:bg-zinc-800 rounded">
-          Sistemas de Control
-        </span>
+      <div class="pt-4 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap gap-1.5">
+        {['Docker', 'n8n', 'Cloudflare', 'Aikido', 'Linux'].map(tag => (
+          <span class="px-2 py-0.5 text-[10px] font-mono text-slate-700 dark:text-zinc-300 bg-slate-100 dark:bg-zinc-800 rounded">
+            {tag}
+          </span>
+        ))}
       </div>
     </SpotlightCard>
 
   </div>
 
   <!-- INTERACTIVE TERMINAL SECTION -->
-  <div class="mt-8">
+  <div>
     <div class="flex items-center gap-2 mb-3">
-      <Terminal className="w-4 h-4 text-brand" />
+      <Terminal className="w-4 h-4 text-slate-900 dark:text-white" />
       <span class="text-xs font-mono font-semibold text-slate-900 dark:text-white uppercase tracking-wider">
-        Consola de Comandos Interactiva
+        Consola Interactiva del Desarrollador
       </span>
     </div>
     <InteractiveTerminal client:idle />

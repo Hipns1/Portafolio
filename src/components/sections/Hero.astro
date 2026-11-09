@@ -1,37 +1,39 @@
 ---
-import { ArrowRight, Download, Terminal, Layers, ShieldCheck, Cpu } from 'lucide-react';
+import { ArrowRight, Download, Layers, Server, ShieldCheck, GitBranch } from 'lucide-react';
 ---
 
-<section id="inicio" class="relative pt-36 pb-20 md:pt-44 md:pb-28 px-4 sm:px-6 max-w-5xl mx-auto text-center">
-  <!-- Status Badge -->
-  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md mb-8 animate-fade-in shadow-sm dark:shadow-inner">
+<section id="inicio" class="relative pt-36 pb-16 md:pt-44 md:pb-24 px-4 sm:px-6 max-w-5xl mx-auto text-center">
+  <!-- Minimalist Status Pill -->
+  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200/90 dark:border-white/10 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md mb-8 shadow-sm">
     <span class="relative flex h-2 w-2">
       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
       <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
     </span>
-    <span class="text-xs font-mono font-medium text-slate-600 dark:text-zinc-400">
-      Desarrollador Full Stack &bull; React &bull; .NET &bull; Cloud
+    <span class="text-xs font-mono font-medium text-slate-700 dark:text-zinc-300">
+      Disponible para proyectos y roles Full Stack
     </span>
   </div>
 
-  <!-- Main Headline -->
-  <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-4xl mx-auto leading-[1.1] mb-6 text-balance">
-    Hola, soy <span class="text-slate-900 dark:text-white">Jesús Pérez</span>.<br/>
-    <span class="bg-gradient-to-r from-brand via-brand-hover to-brand-accent bg-clip-text text-transparent">Desarrollador Full Stack</span>.
+  <!-- Editorial Main Headline -->
+  <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-4xl mx-auto leading-[1.08] mb-6 text-balance">
+    Jesús David Pérez.<br/>
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-indigo-600 to-sky-600 dark:from-white dark:via-indigo-400 dark:to-sky-400">
+      Desarrollador Full Stack.
+    </span>
   </h1>
 
-  <!-- Bio based directly on his CV -->
+  <!-- Executive Summary -->
   <p class="text-base sm:text-lg md:text-xl text-slate-600 dark:text-zinc-400 max-w-3xl mx-auto font-normal leading-relaxed mb-10 text-pretty">
-    Más de 4 años de experiencia construyendo aplicaciones web con <strong>React, Next.js y TypeScript</strong> en el frontend, y servicios backend con <strong>.NET 8 y .NET 10</strong> bajo Clean Architecture, CQRS y arquitectura hexagonal. Enfocado en arquitecturas mantenibles, calidad de código y automatización con Docker y CI/CD.
+    Más de 4 años de experiencia construyendo soluciones web de alto impacto: arquitecturas modernas con <strong>React 19, Next.js y TypeScript</strong> en el frontend, y servicios robustos con <strong>.NET 8/10, Clean Architecture, CQRS y PostgreSQL</strong> en el backend. Enfocado en código limpio, resiliencia y automatización con Docker y CI/CD.
   </p>
 
   <!-- CTA Action Buttons -->
-  <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+  <div class="flex flex-wrap items-center justify-center gap-3.5 mb-16">
     <a
       href="#proyectos"
-      class="group inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-brand hover:bg-brand-hover rounded-xl transition-all duration-200 shadow-lg shadow-brand/20 hover:shadow-brand/35 hover:-translate-y-0.5 active:translate-y-0"
+      class="group inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
     >
-      Ver proyectos
+      Explorar proyectos
       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
     </a>
 
@@ -39,49 +41,53 @@ import { ArrowRight, Download, Terminal, Layers, ShieldCheck, Cpu } from 'lucide
       href="/Jesus_Perez_HV_Desarrollador_I.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-slate-800 dark:text-white bg-white dark:bg-zinc-900 hover:bg-slate-100 dark:hover:bg-zinc-800 border border-slate-200 dark:border-white/10 rounded-xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-sm"
+      class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-slate-700 dark:text-zinc-200 bg-white dark:bg-zinc-900 hover:bg-slate-100 dark:hover:bg-zinc-800 border border-slate-200/90 dark:border-white/10 rounded-xl transition-all duration-200 shadow-sm hover:-translate-y-0.5 active:translate-y-0"
     >
-      <Download className="w-4 h-4 text-brand-accent" />
+      <Download className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
       Descargar CV (PDF)
     </a>
   </div>
 
-  <!-- Tech Highlights Strip -->
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto text-left">
-    <div class="p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/60 shadow-sm backdrop-blur-sm">
-      <div class="flex items-center gap-2 text-brand-accent mb-1">
+  <!-- Executive Architectural Metrics Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-left">
+    <!-- Metric 1: Experience -->
+    <div class="p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white/95 dark:bg-zinc-900/90 shadow-sm backdrop-blur-sm transition-all hover:border-slate-300 dark:hover:border-white/20">
+      <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-2">
         <Layers className="w-4 h-4" />
-        <span class="font-mono text-xs text-slate-500 dark:text-zinc-500">Frontend</span>
+        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-500">Experiencia</span>
       </div>
-      <div class="font-semibold text-sm text-slate-900 dark:text-white">React 19 & Next.js</div>
-      <div class="text-[11px] text-slate-500 dark:text-zinc-400">TypeScript, PWA & Tailwind</div>
+      <div class="text-2xl font-extrabold text-slate-900 dark:text-white mb-0.5 font-mono">+4 Años</div>
+      <p class="text-xs text-slate-600 dark:text-zinc-400">Frontend, Backend &amp; Arquitectura</p>
     </div>
 
-    <div class="p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/60 shadow-sm backdrop-blur-sm">
-      <div class="flex items-center gap-2 text-brand mb-1">
-        <Terminal className="w-4 h-4" />
-        <span class="font-mono text-xs text-slate-500 dark:text-zinc-500">Backend</span>
+    <!-- Metric 2: Frontend -->
+    <div class="p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white/95 dark:bg-zinc-900/90 shadow-sm backdrop-blur-sm transition-all hover:border-slate-300 dark:hover:border-white/20">
+      <div class="flex items-center gap-2 text-sky-600 dark:text-sky-400 mb-2">
+        <Layers className="w-4 h-4" />
+        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-500">Frontend</span>
       </div>
-      <div class="font-semibold text-sm text-slate-900 dark:text-white">.NET 8 & 10</div>
-      <div class="text-[11px] text-slate-500 dark:text-zinc-400">Clean Arch, CQRS & Redis</div>
+      <div class="text-2xl font-extrabold text-slate-900 dark:text-white mb-0.5 font-mono">React 19</div>
+      <p class="text-xs text-slate-600 dark:text-zinc-400">TypeScript, PWA &amp; Web Locks</p>
     </div>
 
-    <div class="p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/60 shadow-sm backdrop-blur-sm">
-      <div class="flex items-center gap-2 text-emerald-500 dark:text-emerald-400 mb-1">
-        <ShieldCheck className="w-4 h-4" />
-        <span class="font-mono text-xs text-slate-500 dark:text-zinc-500">Seguridad</span>
+    <!-- Metric 3: Backend -->
+    <div class="p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white/95 dark:bg-zinc-900/90 shadow-sm backdrop-blur-sm transition-all hover:border-slate-300 dark:hover:border-white/20">
+      <div class="flex items-center gap-2 text-purple-600 dark:text-purple-400 mb-2">
+        <Server className="w-4 h-4" />
+        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-500">Backend</span>
       </div>
-      <div class="font-semibold text-sm text-slate-900 dark:text-white">Controles & Pentesting</div>
-      <div class="text-[11px] text-slate-500 dark:text-zinc-400">Rate limit, CSRF, Aikido</div>
+      <div class="text-2xl font-extrabold text-slate-900 dark:text-white mb-0.5 font-mono">.NET 10</div>
+      <p class="text-xs text-slate-600 dark:text-zinc-400">Clean Arch, CQRS &amp; Redis</p>
     </div>
 
-    <div class="p-4 rounded-xl border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-zinc-900/60 shadow-sm backdrop-blur-sm">
-      <div class="flex items-center gap-2 text-indigo-500 dark:text-indigo-400 mb-1">
-        <Cpu className="w-4 h-4" />
-        <span class="font-mono text-xs text-slate-500 dark:text-zinc-500">DevOps</span>
+    <!-- Metric 4: DevOps & Security -->
+    <div class="p-4 sm:p-5 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white/95 dark:bg-zinc-900/90 shadow-sm backdrop-blur-sm transition-all hover:border-slate-300 dark:hover:border-white/20">
+      <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 mb-2">
+        <GitBranch className="w-4 h-4" />
+        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-500">DevOps</span>
       </div>
-      <div class="font-semibold text-sm text-slate-900 dark:text-white">CI/CD & Docker</div>
-      <div class="text-[11px] text-slate-500 dark:text-zinc-400">n8n, Cloudflare & Linux</div>
+      <div class="text-2xl font-extrabold text-slate-900 dark:text-white mb-0.5 font-mono">GitOps</div>
+      <p class="text-xs text-slate-600 dark:text-zinc-400">Docker, n8n &amp; Cloudflare Tunnel</p>
     </div>
   </div>
 </section>
