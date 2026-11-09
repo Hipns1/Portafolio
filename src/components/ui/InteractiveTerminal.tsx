@@ -26,10 +26,15 @@ export const InteractiveTerminal: React.FC = () => {
     },
   ]);
 
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const terminalBodyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (terminalBodyRef.current) {
+      terminalBodyRef.current.scrollTo({
+        top: terminalBodyRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
   }, [history]);
 
   const handleCommand = (rawCmd: string) => {
@@ -141,6 +146,7 @@ export const InteractiveTerminal: React.FC = () => {
           {['help', 'skills', 'projects', 'contact', 'clear'].map((cmd) => (
             <button
               key={cmd}
+              type="button"
               onClick={() => handleCommand(cmd)}
               className="px-2 py-0.5 text-[10px] bg-slate-200/70 hover:bg-brand/20 dark:bg-zinc-700/60 dark:hover:bg-brand/30 text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white rounded border border-slate-300/50 dark:border-white/5 transition-colors"
             >
@@ -151,7 +157,7 @@ export const InteractiveTerminal: React.FC = () => {
       </div>
 
       {/* Terminal Body */}
-      <div className="p-4 sm:p-5 max-h-64 overflow-y-auto space-y-2">
+      <div ref={terminalBodyRef} className="p-4 sm:p-5 max-h-64 overflow-y-auto space-y-2">
         {history.map((line) => (
           <div key={line.id} className="leading-relaxed">
             {line.type === 'input' ? (
@@ -163,7 +169,6 @@ export const InteractiveTerminal: React.FC = () => {
             )}
           </div>
         ))}
-        <div ref={bottomRef} />
       </div>
 
       {/* Terminal Input */}
