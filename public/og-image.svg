@@ -29,7 +29,7 @@
     <circle cx="20" cy="19" r="5" fill="#10B981"/>
     <circle cx="20" cy="19" r="8" stroke="#10B981" stroke-opacity="0.4" stroke-width="2"/>
     <text x="36" y="24" fill="#D0D6E0" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="500">
-      Disponible • Full Stack Engineer
+      Disponible • Desarrollador Full Stack
     </text>
   </g>
 
@@ -45,7 +45,7 @@
   </text>
   
   <text x="80" y="305" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="34" font-weight="600" letter-spacing="-0.5">
-    Desarrollador Full Stack &amp; Ingeniero Mecatrónico
+    Desarrollador Full Stack
   </text>
 
   <text x="80" y="365" fill="#8A8F98" font-family="'Inter', sans-serif" font-size="20" font-weight="400" max-width="800">
